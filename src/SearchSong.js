@@ -6,11 +6,14 @@ export default function SearchSong(){
     let [song, setSongInfo] = useState("")
     const [loaded, setLoaded] = useState("");
 
-function playSong(response){ 
+
+function playSong(response){
     const eng = "name-USen";
-    setSongInfo({ songURL : response.data.music_uri,
+    setSongInfo({ 
+        songPlayer: <audio controls autoPlay >
+        <source src = {response.data.music_uri} /></audio>,
         songName : response.data.name[eng],
-        songPic : <img src={response.data.image_uri} />,
+        songPic : <img src={response.data.image_uri} alt={response.data.name} />,
         loaded: loaded,
      }
 
@@ -120,6 +123,7 @@ else if (chance >= 0.95 && chance <= 0.96){song = 93;}
 else if (chance >= 0.96 && chance <= 0.98){song = 94;}
 else {song = 95;}
 getSong();
+
 }
 
 if (loaded) { return(<div className="searchSong">
