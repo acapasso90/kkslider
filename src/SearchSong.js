@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import Songinfo from "./Songinfo.js"
+import { ModalBody } from "react-bootstrap";
 
 export default function SearchSong(){
     let [song, setSongInfo] = useState("")
@@ -12,6 +13,7 @@ function playSong(response){
     setSongInfo({ 
         songPlayer: <audio controls autoPlay >
         <source src = {response.data.music_uri} /></audio>,
+        songURL: response.data.music_uri,
         songName : response.data.name[eng],
         songPic : <img src={response.data.image_uri} alt={response.data.name} />,
         loaded: loaded,
@@ -27,6 +29,7 @@ function getSong(event) {
 }
 
 function randomize() {let chance = Math.random();
+    let body = document.querySelector("body");
 if(chance >= 0 && chance <= 0.01){song = 1;}
 else if (chance >= 0.01 && chance <= 0.02){song = 2;}
 else if(chance >= 0.02 && chance <= 0.03){song = 3;}
@@ -34,11 +37,11 @@ else if (chance >= 0.03 && chance <= 0.04){song = 4;}
 else if (chance >= 0.04 && chance <= 0.05){song = 5;}
 else if(chance >= 0.05 && chance <= 0.06){song = 6;}
 else if (chance >= 0.06 && chance <= 0.07){song = 7;}
-else if (chance >= 0.07 && chance <= 0.08){song = 8;}
+else if (chance >= 0.07 && chance <= 0.08){song = 8; body.classList.add("bodyBlack");}
 else if(chance >= 0.08 && chance <= 0.09){song = 9;}
 else if (chance >= 0.09 && chance <= 0.1){song = 10;}
 else if (chance >= 0.1 && chance <= 0.11){song = 11;}
-else if(chance >= 0.11 && chance <= 0.12){song = 12;}
+else if(chance >= 0.11 && chance <= 0.12){song = 12; body.classList.add("bodyLtBlue");}
 else if (chance >= 0.12 && chance <= 0.13){song = 13;}
 else if (chance >= 0.13 && chance <= 0.14){song = 14;}
 else if(chance >= 0.14 && chance <= 0.15){song = 15;}
@@ -66,7 +69,8 @@ else if(chance >= 0.35 && chance <= 0.36){song = 36;}
 else if (chance >= 0.36 && chance <= 0.37){song = 37;}
 else if (chance >= 0.37 && chance <= 0.38){song = 38;}
 else if(chance >= 0.38 && chance <= 0.39){song = 39;}
-else if (chance >= 0.39 && chance <= 0.40){song = 40;}
+else if (chance >= 0.39 && chance <= 0.40){song = 40; body.classList.add("bodyLtBlue");
+}
 else if (chance >= 0.40 && chance <= 0.41){song = 41;}
 else if(chance >= 0.41 && chance <= 0.42){song = 42;}
 else if (chance >= 0.42 && chance <= 0.43){song = 43;}
@@ -92,7 +96,7 @@ else if(chance >= 0.61 && chance <= 0.62){song = 62;}
 else if (chance >= 0.62 && chance <= 0.63){song = 63;}
 else if (chance >= 0.63 && chance <= 0.64){song = 64;}
 else if(chance >= 0.64 && chance <= 0.65){song = 65;}
-else if (chance >= 0.65 && chance <= 0.66){song = 66;}
+else if (chance >= 0.65 && chance <= 0.66){song = 66; body.classList.add("bodyBlack");}
 else if (chance >= 0.66 && chance <= 0.67){song = 67;}
 else if(chance >= 0.67 && chance <= 0.68){song = 68;}
 else if (chance >= 0.68 && chance <= 0.69){song = 69;}
@@ -103,7 +107,7 @@ else if (chance >= 0.72 && chance <= 0.73){song = 73;}
 else if (chance >= 0.73 && chance <= 0.74){song = 74;}
 else if(chance >= 0.74 && chance <= 0.75){song = 75;}
 else if (chance >= 0.75 && chance <= 0.76){song = 76;}
-else if (chance >= 0.76 && chance <= 0.77){song = 77;}
+else if (chance >= 0.76 && chance <= 0.77){song = 77; body.classList.add("bodyLtBlue");}
 else if(chance >= 0.77 && chance <= 0.78){song = 78;}
 else if (chance >= 0.78 && chance <= 0.79){song = 79;}
 else if (chance >= 0.79 && chance <= 0.80){song = 80;}
@@ -121,7 +125,7 @@ else if (chance >= 0.91 && chance <= 0.93){song = 91;}
 else if (chance >= 0.93 && chance <= 0.95){song = 92;}
 else if (chance >= 0.95 && chance <= 0.96){song = 93;}
 else if (chance >= 0.96 && chance <= 0.98){song = 94;}
-else {song = 95;}
+else {song = 95; body.classList.add("bodyLtBlue")}
 getSong();
 
 }
