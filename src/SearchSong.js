@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
 import Songinfo from "./Songinfo.js"
-import { ModalBody } from "react-bootstrap";
 
 export default function SearchSong(){
     let [song, setSongInfo] = useState("")
@@ -45,7 +44,7 @@ else if(chance >= 0.11 && chance <= 0.12){song = 12; body.classList.add("bodyLtB
 else if (chance >= 0.12 && chance <= 0.13){song = 13;}
 else if (chance >= 0.13 && chance <= 0.14){song = 14;}
 else if(chance >= 0.14 && chance <= 0.15){song = 15;}
-else if (chance >= 0.15 && chance <= 0.16){song = 16;}
+else if (chance >= 0.15 && chance <= 0.16){song = 16; body.classList.add("bodyLtBlue");}
 else if (chance >= 0.16 && chance <= 0.17){song = 17;}
 else if(chance >= 0.17 && chance <= 0.18){song = 18;}
 else if (chance >= 0.18 && chance <= 0.19){song = 19;}
@@ -111,7 +110,7 @@ else if (chance >= 0.76 && chance <= 0.77){song = 77; body.classList.add("bodyLt
 else if(chance >= 0.77 && chance <= 0.78){song = 78;}
 else if (chance >= 0.78 && chance <= 0.79){song = 79;}
 else if (chance >= 0.79 && chance <= 0.80){song = 80;}
-else if (chance >= 0.80 && chance <= 0.81){song = 81;}
+else if (chance >= 0.80 && chance <= 0.81){song = 81; body.classList.add("bodyBlack");}
 else if(chance >= 0.81 && chance <= 0.82){song = 82;}
 else if (chance >= 0.82 && chance <= 0.83){song = 83;}
 else if (chance >= 0.83 && chance <= 0.84){song = 84;}
