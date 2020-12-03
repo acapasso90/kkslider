@@ -2,140 +2,157 @@
 body {  background-image: url(media/kkclear.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position-x: -150px;
   background-position-y: bottom;
+  background-color: #F3F3F3;
   font-family: 'Short Stack', cursive;
   min-height: 800px;
-  min-width: 1600px;
 }
 
-header {background-image: url(media/kk\ header.jpg);
+header {background-image: url(media/kk\ header.png);
   background-repeat: no-repeat;
-  background-position-y: -220px;
-  background-position-x: -100px;
-  min-height: 300px;
-min-width: 1700px;}
+  background-position-y: -170px;
+  min-height: 280px;
+min-width: 2200px;
+position: fixed;
+left: -200px;}
 
   header h1 {font-size: 50px;}
-  
+
 .app {  font-family: 'Short Stack', cursive;
   text-align: center;
-max-width: 1400px;}
+max-width: 2000px;}
 
 .bodyWhite {  background-image: url(media/kkclear.png);
   background-color: #ffffff;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position-x: -150px;
   background-position-y: bottom;
 }
 
 .bodyLtBlue {background-image: url(media/kkclear.png);
-  background-image: url(media/kkclear.png), linear-gradient(41deg, rgba(255,255,255,1) 0%, rgba(191,232,245,1) 50%, rgba(151,238,208,1) 100%);
+  background-image: url(media/kkclear.png), linear-gradient(0deg, rgba(150,255,250,1) 0%, rgba(229,255,249,1) 50%, rgba(255,255,255,1) 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position-x: -150px;
   background-position-y: bottom;
+
   }
 
 .bodyBlack {background-image: url(media/kkclear.png);
+  background-color: #000000;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position-x: -150px;
   background-position-y: bottom;
-background-color: #000000;
+
 color: #ffffff;}
 
 .bodyYellow {
 background-image: url(media/kkclear.png);
+background-color: #FFFE1C;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position-x: -150px;
   background-position-y: bottom;
-background-color: #FFFE1C;
+
 }
 
 .bodySepia {background-image: url(media/kkclear.png);
+  background-image: url(media/kkclear.png), linear-gradient(0deg, rgba(255,215,150,1) 0%, rgba(245,226,191,1) 50%, rgba(255,255,255,1) 100%);;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position-x: -150px;
   background-position-y: bottom;
-background-color: #CEAA75;}
+}
 
 .bodyPinktoWhite {background-image: url(media/kkclear.png);
-  background-image: url(media/kkclear.png), linear-gradient(41deg, rgba(238,151,205,1) 0%, rgba(218,191,245,1) 50%, rgba(255,255,255,1) 100%);
+  background-image: url(media/kkclear.png), linear-gradient(0deg, rgba(238,151,205,1) 0%, rgba(218,191,245,1) 50%, rgba(255,255,255,1) 100%);
+
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position-x: -150px;
-  background-position-y: bottom;}
+  background-position-y: bottom;  
+}
 
   .bodyMagenta {background-image: url(media/kkclear.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position-x: -150px;
-    background-position-y: bottom;
     background-color: #F0018E;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-y: bottom;   
   }
+
   .bodyGreen {background-image: url(media/kkclear.png);
+    background-image: url(media/kkclear.png), linear-gradient(0deg, #78C945 0%, #ffffff 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position-x: -150px;
-    background-position-y: bottom;
-  background-color: #78C945}
+    background-position-y: bottom;}
 
-  .bodyGray {background-image: url(media/kkclear.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position-x: -150px;
-    background-position-y: bottom;
-    background-color: #5F6163;}
-
-.bodyRed {background-image: url(media/kkclear.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position-x: -150px;
-  background-position-y: bottom;
-    background-color: #870114;}
-
-    .bodyBrown{background-image: url(media/kkclear.png);
+    .bodyDarkGreen {background-image: url(media/kkclear.png);
+      background-color: #14A609;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      background-position-x: -150px;
       background-position-y: bottom;
-      background-color: #381D0D; }
+    }
+
+  .bodyGray {background-image: url(media/kkclear.png);
+    background-color:#5F6163;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-y: bottom;
+}
+
+.bodyRed {background-image: url(media/kkclear.png);
+  background-color: #870114;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  background-attachment: fixed;
+  background-position-y: bottom;}
+
+    .bodyBrown{background-image: url(media/kkclear.png);
+      background-color: #381D0D;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #def5a0;
+          background-position-y: bottom;}
 
       .bodyOrange {
         background-image: url(media/kkclear.png);
+        background-image: url(media/kkclear.png), linear-gradient(0deg, #E85A1F 0%, #ffffff 100%);
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-position-x: -150px;
         background-position-y: bottom;
-        background-color: #E85A1F;
       }
 
       .bodyDarkBlue {   background-image: url(media/kkclear.png);
+        background-color: #141F3A;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-position-x: -150px;
+        color: #ffffff;
         background-position-y: bottom;
-        background-color: #141F3A;
       }
 
       .bodyPurple {   background-image: url(media/kkclear.png);
+background-color: #562150;
+color: #ffffff;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-position-x: -150px;
         background-position-y: bottom;
-        background-color: #562150;
       }
 
       .bodyCerulean {background-image: url(media/kkclear.png);
+        background-image: url(media/kkclear.png), linear-gradient(0deg, #149EBE 0%, rgba(255,255,255,1) 100%);
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-position-x: -150px;
         background-position-y: bottom;
-        background-color: #149EBE;
       }
+
+      .bodySnow  {background-image: url(media/kk\ snow.jpg);
+        background-color: #F3F3F3;       
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-x: 500px;
+        background-position-y: -800px;
+      }
+
+
 .Songinfo img {max-height: 300px;
 max-width: 300px;
 }
+
+.searchSong .container {position: relative;
+top: 330px}

@@ -3,11 +3,10 @@ import Header from "./Header.js";
 import SearchSong from "./SearchSong.js";
 
 function App() {
-  return ( <div className="container">
+  return ( 
     <div className="app">
       <Header />
       <SearchSong  />
-      </div>
       </div>
   );
 }
