@@ -1,6 +1,5 @@
 
 body {  background-image: url(media/kkclear.png);
-  background-color: #ffffff;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position-x: -150px;
@@ -11,14 +10,25 @@ body {  background-image: url(media/kkclear.png);
 }
 
 header {background-image: url(media/kk\ header.jpg);
-  background-position-y: 350px;
+  background-repeat: no-repeat;
+  background-position-y: -220px;
+  background-position-x: -100px;
   min-height: 300px;
 min-width: 1700px;}
 
   header h1 {font-size: 50px;}
   
 .app {  font-family: 'Short Stack', cursive;
-  text-align: center;}
+  text-align: center;
+max-width: 1400px;}
+
+.bodyWhite {  background-image: url(media/kkclear.png);
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: -150px;
+  background-position-y: bottom;
+}
 
 .bodyLtBlue {background-image: url(media/kkclear.png);
   background-image: url(media/kkclear.png), linear-gradient(41deg, rgba(255,255,255,1) 0%, rgba(191,232,245,1) 50%, rgba(151,238,208,1) 100%);
@@ -117,6 +127,14 @@ background-color: #CEAA75;}
         background-position-x: -150px;
         background-position-y: bottom;
         background-color: #562150;
+      }
+
+      .bodyCerulean {background-image: url(media/kkclear.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-x: -150px;
+        background-position-y: bottom;
+        background-color: #149EBE;
       }
 .Songinfo img {max-height: 300px;
 max-width: 300px;
