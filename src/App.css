@@ -73,6 +73,51 @@ background-color: #CEAA75;}
     background-position-y: bottom;
   background-color: #78C945}
 
+  .bodyGray {background-image: url(media/kkclear.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: -150px;
+    background-position-y: bottom;
+    background-color: #5F6163;}
+
+.bodyRed {background-image: url(media/kkclear.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: -150px;
+  background-position-y: bottom;
+    background-color: #870114;}
+
+    .bodyBrown{background-image: url(media/kkclear.png);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position-x: -150px;
+      background-position-y: bottom;
+      background-color: #381D0D; }
+
+      .bodyOrange {
+        background-image: url(media/kkclear.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-x: -150px;
+        background-position-y: bottom;
+        background-color: #E85A1F;
+      }
+
+      .bodyDarkBlue {   background-image: url(media/kkclear.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-x: -150px;
+        background-position-y: bottom;
+        background-color: #141F3A;
+      }
+
+      .bodyPurple {   background-image: url(media/kkclear.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-x: -150px;
+        background-position-y: bottom;
+        background-color: #562150;
+      }
 .Songinfo img {max-height: 300px;
 max-width: 300px;
 }
