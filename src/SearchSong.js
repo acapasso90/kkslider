@@ -31,7 +31,7 @@ if (randomNumber >= 96 && randomNumber <= 97){randomNumber = 88;}
 else if (randomNumber === 0){randomNumber = 34;}
 else if(randomNumber > 97 && randomNumber <= 98){randomNumber = 43;}
 else if(randomNumber > 98 && randomNumber <= 99){randomNumber = 33;}
-else if(randomNumber > 99 && randomNumber <= 100){randomNumber = 45;}
+else if(randomNumber > 99 && randomNumber <= 100){randomNumber = 71;}
 else if (randomNumber === 1 || randomNumber ===  10 || randomNumber ===  11 || randomNumber ===  15 ||
      randomNumber === 47 || randomNumber === 49 || randomNumber === 63 || randomNumber === 84)
      {body.classList.remove("bodyLtBlue"); 
@@ -350,15 +350,15 @@ body.classList.remove("bodyLtBlue");
 
 if (loaded) { return(<div className="searchSong">
 <div className="container">
-<button onClick={randomize}>Randomize</button>
 <Songinfo data={song} />
+<button onClick={randomize}>Play Random</button>
 </div>
 </div>)}
 else { getDefaultSong();
     return(<div className="searchSong">
 <div className="container">
-<button onClick={randomize}>Randomize</button>
 <Songinfo data={song} />
+<button onClick={randomize}>Play Random</button>
 </div>
 </div>);}
 } 

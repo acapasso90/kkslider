@@ -5,8 +5,8 @@ export default function Header(){
         <div className="Header">
             <div className="container">
                 <header>
-<h1> K.K. Concert</h1>
-
+<h1> K.K. Jukebox</h1>
+<div className="backdrop"></div>
                 </header>
 
             </div>
