@@ -50,31 +50,33 @@ text-shadow: 1px 1px 0px #491a1a,
 -2px 2px 0px #491a1a,
 -3px 3px 8px #000000;}
 
-.SmallHeader header {background-image: url(media/kk\ headerSmall.jpg);
+.smallHeader header {background-image: url(media/kk\ headerSmall.jpg);
   background-repeat: no-repeat;
-  background-position-y: -50px;
-  left: -180px;
-  max-height: 140px;
+  background-position-y: -60px;
+  left: -210px;
+  min-height: 100px;
 max-width: 800px;
 position: fixed;
-z-index: 1;
+z-index: 0;
 box-shadow: 0px 4px 6px #b3b2b2;}
 
-.SmallHeader header .backdrop {  max-height: 80px;
+.smallHeader header .backdrop {  max-height: 80px;
   min-height: 35px;
   opacity: 40%;
   min-width: 2200px;
 z-index: -1;
 background-color: #f1e3e3;
 position: relative;
+top: 62px;
 
 }
-.SmallHeader header h1 {font-size: 32pt;
-  letter-spacing: 8px;
+.smallHeader header h1 {font-size: 32pt;
+  letter-spacing: 6px;
   color: #da8f4d;
-  position: relative;
-  top: 50px;
-  margin-left: -55px;
+  position: absolute;
+  z-index: 2;
+  top: 55px;
+  margin-left: 212px;
 text-shadow: 1px 1px 0px #491a1a,
 -1px -1px 0px #491a1a,
 2px 2px 0px #491a1a,
