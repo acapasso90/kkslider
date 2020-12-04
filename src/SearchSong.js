@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
-import Songinfo from "./Songinfo.js"
+import Songinfo from "./Songinfo.js";
 
 export default function SearchSong(){
     let [song, setSongInfo] = useState("")
@@ -13,12 +13,25 @@ function playSong(response){
         songName : response.data.name[eng],
         songPic : <img src={response.data.image_uri} alt={response.data.name} />,
         loaded: loaded,
+        previous: (--response.data.id),
+        //next: (++(response.data.id)),
      }
     )
     setLoaded("loaded");
 }
+//console.log(song.next)
+function previousSong(){ 
+    let prevsong = song.previous;
+    let newURL = `https://acnhapi.com/v1a/songs/${prevsong}`;
+    axios.get(newURL).then(playSong);
+ }
 
+// function nextSong(){
+  //  let nextsong = song.next;
+    //let newestURL = `https://acnhapi.com/v1a/songs/${nextsong}`;
+    //axios.get(newestURL).then(playSong);
 
+ }
 function getDefaultSong(event){
     song = 88;
     let ApiURL = `https://acnhapi.com/v1a/songs/${song}`;
@@ -351,15 +364,15 @@ body.classList.remove("bodyLtBlue");
 if (loaded) { return(<div className="searchSong">
 <div className="container">
     <div className="left">
-    <div className="leftArrow">
+    <div className="leftArrow" onClick={previousSong}>
         <div className="topPoint"></div>
         <div className="bottomPoint"></div>
         <div className="flat"></div>
-    </div></div>
+    </div>  </div>
 <Songinfo data={song} />
 <button onClick={randomize}>Play Random</button>
 <div className="right">
-<div className="rightArrow">
+<div className="rightArrow" onClick={nextSong}>
         <div className="topPoint"></div>
         <div className="bottomPoint"></div>
         <div className="flat"></div>
@@ -370,8 +383,22 @@ if (loaded) { return(<div className="searchSong">
 else { getDefaultSong();
     return(<div className="searchSong">
 <div className="container">
+<div className="left">
+<div className="leftArrow" onClick={previousSong}>
+        <div className="topPoint"></div>
+        <div className="bottomPoint"></div>
+        <div className="flat"></div>
+    </div>
+    </div>
 <Songinfo data={song} />
 <button onClick={randomize}>Play Random</button>
+<div className="right">
+<div className="rightArrow" onClick={nextSong}>
+        <div className="topPoint"></div>
+        <div className="bottomPoint"></div>
+        <div className="flat"></div>
+    </div>
+    </div>
 </div>
 </div>);}
 } 
