@@ -350,8 +350,21 @@ body.classList.remove("bodyLtBlue");
 
 if (loaded) { return(<div className="searchSong">
 <div className="container">
+    <div className="left">
+    <div className="leftArrow">
+        <div className="topPoint"></div>
+        <div className="bottomPoint"></div>
+        <div className="flat"></div>
+    </div></div>
 <Songinfo data={song} />
 <button onClick={randomize}>Play Random</button>
+<div className="right">
+<div className="rightArrow">
+        <div className="topPoint"></div>
+        <div className="bottomPoint"></div>
+        <div className="flat"></div>
+    </div>
+    </div>
 </div>
 </div>)}
 else { getDefaultSong();
