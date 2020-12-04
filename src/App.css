@@ -28,7 +28,7 @@ min-width: 2200px;
 position: fixed;
 left: -200px;
 z-index: 1;
-box-shadow: 0px 4px 6px #ebdfdf;}
+box-shadow: 0px 4px 6px #b3b2b2;}
 
 .Header header .backdrop {  min-height: 110px;
   opacity: 42%;
@@ -58,21 +58,22 @@ text-shadow: 1px 1px 0px #491a1a,
 max-width: 800px;
 position: fixed;
 z-index: 1;
-box-shadow: 0px 4px 6px #ebdfdf;}
+box-shadow: 0px 4px 6px #b3b2b2;}
 
-.SmallHeader header .backdrop {  min-height: 60px;
-  opacity: 42%;
+.SmallHeader header .backdrop {  max-height: 80px;
+  min-height: 35px;
+  opacity: 40%;
   min-width: 2200px;
 z-index: -1;
 background-color: #f1e3e3;
 position: relative;
 
 }
-.SmallHeader header h1 {font-size: 30pt;
-  letter-spacing: 10px;
+.SmallHeader header h1 {font-size: 32pt;
+  letter-spacing: 8px;
   color: #da8f4d;
   position: relative;
-  top: 77px;
+  top: 50px;
   margin-left: -55px;
 text-shadow: 1px 1px 0px #491a1a,
 -1px -1px 0px #491a1a,
@@ -235,10 +236,12 @@ bottom: 10px;
 .searchSong .container {position: relative;
 top: 270px}
 
-.SmallSearchSong .Songinfo img {max-height: 200px;
+.smallSearchSong .Songinfo img {max-height: 200px;
   max-width: 200px;
   position: relative;
   bottom: 10px;
   }
-.SmallSearchSong .container {position: relative;
+.smallSearchSong .container {position: relative;
   top: 130px}
+
+.smallSearchSong .songName {font-size: 30px;}
