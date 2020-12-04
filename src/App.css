@@ -29,7 +29,7 @@ min-width: 2200px;
 position: fixed;
 left: -200px;
 z-index: 1;
-box-shadow: 0px 4px 6px #b3b2b2;}
+box-shadow: 0px 4px 6px #f8e7c7;}
 
 .Header header .backdrop {  min-height: 110px;
   opacity: 42%;
@@ -59,7 +59,7 @@ text-shadow: 1px 1px 0px #491a1a,
 max-width: 800px;
 position: fixed;
 z-index: 0;
-box-shadow: 0px 4px 6px #b3b2b2;}
+box-shadow: 0px 4px 6px #f8e7c7;}
 
 .smallHeader header .backdrop {  max-height: 80px;
   min-height: 35px;
@@ -109,8 +109,7 @@ max-width: 2000px;}
   background-color: #000000;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position-y: bottom;
-
+  background-position-y: -1080px;
 color: #ffffff;}
 
 .bodyYellow {
@@ -227,7 +226,7 @@ color: #ffffff;
 .left {float: left;}
 
 .leftArrow {position: absolute;
-  left: 220px;}
+  left: 215px;}
 
 .leftArrow .topPoint {background-color: #381D0D;
   margin-top: 180px;
@@ -246,11 +245,18 @@ min-width: 60px;
 transform: rotate(35deg);
  }
 
+ .leftArrow .flat {background-color: #381D0D;
+  margin-top: -36px;
+  margin-left: 17px;
+min-height: 20px;
+max-width: 12px;
+transform: rotate(35deg);}
+
  .right {float: right;}
 
-.rightArrow {position: absolute;
-  right: 200px;
-  bottom: 272px;}
+.rightArrow {position: fixed;
+  right: 450px;
+  bottom: 305px;}
 
       .rightArrow .topPoint {background-color: #381D0D;
         height: 100%;
@@ -258,18 +264,28 @@ transform: rotate(35deg);
   min-height: 20px;
       max-height: 40px;
       min-width: 60px;
-      transform: rotate(35deg);
+      transform: rotate(40deg);
        }
       
        .rightArrow .bottomPoint {background-color: #381D0D;
-        margin-top: 11px;
+        margin-top: 9px;
 position: relative;
-left: 9px;
+left: 2px;
+z-index: -1;
         border: 4px solid  #da8f4d;
       min-height: 20px;
       min-width: 60px;
-      transform: rotate(125deg);
+      transform: rotate(130deg);
        }
+       .rightArrow .flat {background-color: #381D0D;
+        position: relative;
+        top: 2px;
+        margin-top: -27px;
+        margin-left: 30px;
+        z-index: 2;
+      min-height: 20px;
+      max-width: 12px;
+      transform: rotate(40deg);}
 
        .Songinfo .songName {font-size: 40px;
         letter-spacing: 3px;
