@@ -1,4 +1,6 @@
-
+audio {
+  border: 2.5px solid #682424;
+border-radius: 10px;}
 body {  background-image: url(media/kkclear.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -8,14 +10,17 @@ body {  background-image: url(media/kkclear.png);
   min-height: 780px;
 }
 
-button {background-color: #da8f4d;
+button, button:hover {background-color: #da8f4d;
 border: 3px solid #682424;
-color: #240b0b;
+color: #440f0f;
 padding: 15px 25px;
-border-radius: 2px;
+border-radius: 4px;
  }
 
-header {background-image: url(media/kk\ header.png);
+ button:active {margin-top: 2px;
+  border: 3px solid #682424;}
+
+.Header header {background-image: url(media/kk\ header.png);
   background-repeat: no-repeat;
   background-position-y: -170px;
   max-height: 240px;
@@ -25,7 +30,7 @@ left: -200px;
 z-index: 1;
 box-shadow: 0px 4px 6px #ebdfdf;}
 
-header .backdrop {  min-height: 110px;
+.Header header .backdrop {  min-height: 110px;
   opacity: 42%;
   min-width: 2200px;
 z-index: -1;
@@ -33,12 +38,42 @@ background-color: #f1e3e3;
 position: relative;
 top: -30px;
 }
-  header h1 {font-size: 95pt;
+.Header header h1 {font-size: 95pt;
   color: #da8f4d;
   position: relative;
   top: 110px;
-  letter-spacing: 50px;
+  letter-spacing: 55px;
   margin-right: 150px;
+text-shadow: 1px 1px 0px #491a1a,
+-1px -1px 0px #491a1a,
+2px 2px 0px #491a1a,
+-2px 2px 0px #491a1a,
+-3px 3px 8px #000000;}
+
+.SmallHeader header {background-image: url(media/kk\ headerSmall.jpg);
+  background-repeat: no-repeat;
+  background-position-y: -50px;
+  left: -180px;
+  max-height: 140px;
+max-width: 800px;
+position: fixed;
+z-index: 1;
+box-shadow: 0px 4px 6px #ebdfdf;}
+
+.SmallHeader header .backdrop {  min-height: 60px;
+  opacity: 42%;
+  min-width: 2200px;
+z-index: -1;
+background-color: #f1e3e3;
+position: relative;
+
+}
+.SmallHeader header h1 {font-size: 30pt;
+  letter-spacing: 10px;
+  color: #da8f4d;
+  position: relative;
+  top: 77px;
+  margin-left: -55px;
 text-shadow: 1px 1px 0px #491a1a,
 -1px -1px 0px #491a1a,
 2px 2px 0px #491a1a,
@@ -185,7 +220,8 @@ color: #ffffff;
         background-position-y: -800px;
       }
 
-      .Songinfo .songName {font-size: 30px;
+      .Songinfo .songName {font-size: 40px;
+        letter-spacing: 3px;
       margin-bottom: 12px;}
 
 .Songinfo img {max-height: 300px;
@@ -197,4 +233,12 @@ bottom: 10px;
 .Songinfo .player {margin-bottom: 5px;}
 
 .searchSong .container {position: relative;
-top: 300px}
+top: 270px}
+
+.SmallSearchSong .Songinfo img {max-height: 200px;
+  max-width: 200px;
+  position: relative;
+  bottom: 10px;
+  }
+.SmallSearchSong .container {position: relative;
+  top: 130px}

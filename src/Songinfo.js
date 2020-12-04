@@ -12,7 +12,7 @@ useEffect(() => {
         <div className="songImage">{props.data.songPic}</div>
         <div className="player"> 
         <audio autoPlay key={newSong} controls  >
-        <source src = {newSong} /></audio>,
+        <source src = {newSong} /></audio>
         </div>
         </div>
 );}
