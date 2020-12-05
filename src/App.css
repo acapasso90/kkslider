@@ -194,8 +194,7 @@ color: #810072;
 
       .bodyOrange {
         background-image: url(media/kkclear.png);
-        background-image: url(media/kkclear.png), 
-        linear-gradient(0deg, #E85A1F 0%, #ffffff 100%);
+        background-image: url(media/kkclear.png), linear-gradient(0deg, #E85A1F 0%, #ffffff 100%);
         color: #6b0514;
         background-repeat: no-repeat;
         background-attachment: fixed;

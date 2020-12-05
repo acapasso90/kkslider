@@ -18,7 +18,7 @@ function playSong(response){
         previous: (--(response.data.id)),
      }
     )
-    if (song === 1 || song ===  10 || song ===  11 || song ===  15 ||
+    if (song === 1 || song ===  10 || song ===  11  ||
         song === 47 || song === 49 || song === 63 || song === 84)
         {body.classList.remove("bodyLtBlue"); 
         body.classList.remove("bodySepia");
@@ -256,7 +256,7 @@ function playSong(response){
         body.classList.remove("bodyCerulean");
         body.classList.remove("bodySnow")
        body.classList.add("bodyOrange");}
-   else if (song === 35 || song === 50)
+   else if (song === 35 || song === 50 || song ===  15)
    {body.classList.remove("bodyYellow")
    body.classList.remove("bodyLtBlue"); 
         body.classList.remove("bodySepia");
