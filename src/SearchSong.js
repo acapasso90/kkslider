@@ -8,85 +8,20 @@ export default function SearchSong(){
 
 function playSong(response){
     const eng = "name-USen";
+    let body = document.querySelector("body")
     setSongInfo({ 
         songURL: response.data.music_uri,
         songName : response.data.name[eng],
         songPic : <img src={response.data.image_uri} alt={response.data.name} />,
         loaded: loaded,
-        previous: (--response.data.id),
-        //next: (++(response.data.id)),
+        thisone: response.data.id,
+        previous: (--(response.data.id)),
      }
     )
-    setLoaded("loaded");
-}
-//console.log(song.next)
-function previousSong(){ 
-    let prevsong = song.previous;
-    let newURL = `https://acnhapi.com/v1a/songs/${prevsong}`;
-    axios.get(newURL).then(playSong);
- }
-
-// function nextSong(){
-  //  let nextsong = song.next;
-    //let newestURL = `https://acnhapi.com/v1a/songs/${nextsong}`;
-    //axios.get(newestURL).then(playSong);
-
- }
-function getDefaultSong(event){
-    song = 88;
-    let ApiURL = `https://acnhapi.com/v1a/songs/${song}`;
-axios.get(ApiURL).then(playSong);
-}
-function randomize() {
-    let body = document.querySelector("body");
-    let randomNumber = Math.floor(Math.random() * 95);
-if (randomNumber >= 96 && randomNumber <= 97){randomNumber = 88;}
-else if (randomNumber === 0){randomNumber = 34;}
-else if(randomNumber > 97 && randomNumber <= 98){randomNumber = 43;}
-else if(randomNumber > 98 && randomNumber <= 99){randomNumber = 33;}
-else if(randomNumber > 99 && randomNumber <= 100){randomNumber = 71;}
-else if (randomNumber === 1 || randomNumber ===  10 || randomNumber ===  11 || randomNumber ===  15 ||
-     randomNumber === 47 || randomNumber === 49 || randomNumber === 63 || randomNumber === 84)
-     {body.classList.remove("bodyLtBlue"); 
-     body.classList.remove("bodySepia");
-     body.classList.remove("bodyPinktoWhite");
-     body.classList.remove("bodyMagenta");
-     body.classList.remove("bodyBlack");
-     body.classList.remove("bodyWhite");
-     body.classList.remove("bodyGray");
-     body.classList.remove("bodyGreen");
-     body.classList.remove("bodyDarkGreen");
-     body.classList.remove("bodyRed");
-     body.classList.remove("bodyBrown");
-     body.classList.remove("bodyOrange");
-     body.classList.remove("bodyDarkBlue");
-     body.classList.remove("bodyPurple");
-     body.classList.remove("bodyCerulean");
-     body.classList.remove("bodySnow");
-         body.classList.add("bodyYellow");}
-else if (randomNumber === 2 || randomNumber === 5 || randomNumber === 9 || randomNumber ===  12 || randomNumber === 19
-    || randomNumber === 40 || randomNumber === 43 || randomNumber === 59 || randomNumber === 77 || randomNumber === 90 || randomNumber === 92 || randomNumber === 95)
-     {body.classList.remove("bodyYellow"); 
-     body.classList.remove("bodySepia");
-     body.classList.remove("bodyPinktoWhite");
-     body.classList.remove("bodyMagenta");
-     body.classList.remove("bodyBlack");
-     body.classList.remove("bodyWhite");
-     body.classList.remove("bodyGray");
-     body.classList.remove("bodyGreen");
-     body.classList.remove("bodyDarkGreen");
-     body.classList.remove("bodyRed");
-     body.classList.remove("bodyBrown");
-     body.classList.remove("bodyOrange");
-     body.classList.remove("bodyDarkBlue");
-     body.classList.remove("bodyPurple");
-     body.classList.remove("bodyCerulean");
-     body.classList.remove("bodySnow");
-         body.classList.add("bodyLtBlue");}
-else if (randomNumber === 3 || randomNumber === 23 || randomNumber ===25 || randomNumber === 26 ||randomNumber === 38 || randomNumber === 44 || randomNumber === 48 
-        || randomNumber === 74 || randomNumber === 79 || randomNumber === 85)
-        {body.classList.remove("bodyYellow"); 
-        body.classList.remove("bodyLtBlue"); 
+    if (song === 1 || song ===  10 || song ===  11 || song ===  15 ||
+        song === 47 || song === 49 || song === 63 || song === 84)
+        {body.classList.remove("bodyLtBlue"); 
+        body.classList.remove("bodySepia");
         body.classList.remove("bodyPinktoWhite");
         body.classList.remove("bodyMagenta");
         body.classList.remove("bodyBlack");
@@ -101,261 +36,311 @@ else if (randomNumber === 3 || randomNumber === 23 || randomNumber ===25 || rand
         body.classList.remove("bodyPurple");
         body.classList.remove("bodyCerulean");
         body.classList.remove("bodySnow");
-            body.classList.add("bodySepia");}
-else if (randomNumber === 4 || randomNumber === 6 || randomNumber === 30 || randomNumber === 39 || randomNumber === 73 || randomNumber === 87)
-         {body.classList.remove("bodyYellow"); 
-         body.classList.remove("bodyLtBlue"); 
-         body.classList.remove("bodySepia");
-         body.classList.remove("bodyMagenta");
-         body.classList.remove("bodyBlack");
-         body.classList.remove("bodyWhite");
-         body.classList.remove("bodyGray");
-         body.classList.remove("bodyGreen");
-         body.classList.remove("bodyDarkGreen");
-         body.classList.remove("bodyRed");
-         body.classList.remove("bodyBrown");
-         body.classList.remove("bodyOrange");
-         body.classList.remove("bodyDarkBlue");
-         body.classList.remove("bodyPurple");
-         body.classList.remove("bodyCerulean");
-         body.classList.remove("bodySnow");
-             body.classList.add("bodyPinktoWhite");}
-else if (randomNumber === 7 || randomNumber === 37) 
-         {body.classList.remove("bodyYellow");
-          body.classList.remove("bodyLtBlue"); 
-         body.classList.remove("bodySepia");
-         body.classList.remove("bodyPinktoWhite");
-         body.classList.remove("bodyBlack");
-         body.classList.remove("bodyWhite");
-         body.classList.remove("bodyGray");
-         body.classList.remove("bodyGreen");
-         body.classList.remove("bodyDarkGreen");
-         body.classList.remove("bodyRed");
-         body.classList.remove("bodyBrown");
-         body.classList.remove("bodyOrange");
-         body.classList.remove("bodyDarkBlue");
-         body.classList.remove("bodyPurple");
-         body.classList.remove("bodyCerulean");
-         body.classList.remove("bodySnow");
-             body.classList.add("bodyMagenta");}
-else if (randomNumber === 8 || randomNumber === 29 || randomNumber === 58 || randomNumber === 66 || randomNumber === 81 || randomNumber === 86 || randomNumber === 91 || randomNumber === 93)
-{body.classList.remove("bodyYellow"); 
-body.classList.remove("bodyLtBlue"); 
-     body.classList.remove("bodySepia");
-     body.classList.remove("bodyPinktoWhite");
-     body.classList.remove("bodyMagenta");
-     body.classList.remove("bodyWhite");
-     body.classList.remove("bodyGray");
-     body.classList.remove("bodyGreen");
-     body.classList.remove("bodyDarkGreen");
-     body.classList.remove("bodyRed");
-     body.classList.remove("bodyBrown");
-     body.classList.remove("bodyOrange");
-     body.classList.remove("bodyDarkBlue");
-     body.classList.remove("bodyPurple");
-     body.classList.remove("bodyCerulean");
-     body.classList.remove("bodySnow");
-    body.classList.add("bodyBlack");}
-else if (randomNumber === 13 || randomNumber === 14 || randomNumber === 16 || randomNumber === 70)
-{body.classList.remove("bodyYellow");
-body.classList.remove("bodyLtBlue"); 
-     body.classList.remove("bodySepia");
-     body.classList.remove("bodyPinktoWhite");
-     body.classList.remove("bodyMagenta");
-     body.classList.remove("bodyBlack");
-     body.classList.remove("bodyGray");
-     body.classList.remove("bodyGreen");
-     body.classList.remove("bodyDarkGreen");
-     body.classList.remove("bodyRed");
-     body.classList.remove("bodyBrown");
-     body.classList.remove("bodyOrange");
-     body.classList.remove("bodyDarkBlue");
-     body.classList.remove("bodyPurple");
-     body.classList.remove("bodyCerulean");
-     body.classList.remove("bodySnow");
-    body.classList.add("bodyWhite");}
-else if (randomNumber === 17 || randomNumber === 20 || randomNumber === 28 || randomNumber === 82 || randomNumber ===94)
-{body.classList.remove("bodyYellow")
-body.classList.remove("bodyLtBlue"); 
-     body.classList.remove("bodySepia");
-     body.classList.remove("bodyPinktoWhite");
-     body.classList.remove("bodyMagenta");
-     body.classList.remove("bodyBlack");
-     body.classList.remove("bodyWhite");
-     body.classList.remove("bodyGreen");
-     body.classList.remove("bodyDarkGreen");
-     body.classList.remove("bodyRed");
-     body.classList.remove("bodyBrown");
-     body.classList.remove("bodyOrange");
-     body.classList.remove("bodyDarkBlue");
-     body.classList.remove("bodyPurple");
-     body.classList.remove("bodyCerulean");
-     body.classList.remove("bodySnow");
-    body.classList.add("bodyGray");}
-else if (randomNumber === 21 || randomNumber === 22 || randomNumber === 45 || randomNumber === 68 || randomNumber === 75 || randomNumber === 76 || randomNumber === 80)
-{body.classList.remove("bodyYellow")
-body.classList.remove("bodyLtBlue"); 
-     body.classList.remove("bodySepia");
-     body.classList.remove("bodyPinktoWhite");
-     body.classList.remove("bodyMagenta");
-     body.classList.remove("bodyBlack");
-     body.classList.remove("bodyWhite");
-     body.classList.remove("bodyGray");
-     body.classList.remove("bodyDarkGreen");
-     body.classList.remove("bodyRed");
-     body.classList.remove("bodyBrown");
-     body.classList.remove("bodyOrange");
-     body.classList.remove("bodyDarkBlue");
-     body.classList.remove("bodyPurple");
-     body.classList.remove("bodyCerulean");
-     body.classList.remove("bodySnow");
-    body.classList.add("bodyGreen");}
-else if (randomNumber === 54 || randomNumber === 57 || randomNumber === 72 || randomNumber === 78)
-{body.classList.remove("bodyYellow")
-body.classList.remove("bodyLtBlue"); 
-     body.classList.remove("bodySepia");
-     body.classList.remove("bodyPinktoWhite");
-     body.classList.remove("bodyMagenta");
-     body.classList.remove("bodyBlack");
-     body.classList.remove("bodyWhite");
-     body.classList.remove("bodyGray");
-     body.classList.remove("bodyGreen");
-     body.classList.remove("bodyRed");
-     body.classList.remove("bodyBrown");
-     body.classList.remove("bodyOrange");
-     body.classList.remove("bodyDarkBlue");
-     body.classList.remove("bodyPurple");
-     body.classList.remove("bodyCerulean");
-     body.classList.remove("bodySnow")
-    body.classList.add("bodyDarkGreen");}
-else if (randomNumber === 27 || randomNumber === 31 || randomNumber === 51 || randomNumber === 53 || randomNumber === 64 || randomNumber === 83)
-{body.classList.remove("bodyYellow")
-body.classList.remove("bodyLtBlue"); 
-     body.classList.remove("bodySepia");
-     body.classList.remove("bodyPinktoWhite");
-     body.classList.remove("bodyMagenta");
-     body.classList.remove("bodyBlack");
-     body.classList.remove("bodyWhite");
-     body.classList.remove("bodyGray");
-     body.classList.remove("bodyGreen");
-     body.classList.remove("bodyDarkGreen");
-     body.classList.remove("bodyBrown");
-     body.classList.remove("bodyOrange");
-     body.classList.remove("bodyDarkBlue");
-     body.classList.remove("bodyPurple");
-     body.classList.remove("bodyCerulean");
-     body.classList.remove("bodySnow")
-    body.classList.add("bodyRed");}
-else if(randomNumber === 18 || randomNumber === 24 || randomNumber === 32 || randomNumber === 34 || randomNumber === 36 || randomNumber === 55 || 
-     randomNumber === 69 || randomNumber === 71)
-{body.classList.remove("bodyYellow");
-body.classList.remove("bodyLtBlue"); 
-     body.classList.remove("bodySepia");
-     body.classList.remove("bodyPinktoWhite");
-     body.classList.remove("bodyMagenta");
-     body.classList.remove("bodyBlack");
-     body.classList.remove("bodyWhite");
-     body.classList.remove("bodyGray");
-     body.classList.remove("bodyGreen");
-     body.classList.remove("bodyDarkGreen");
-     body.classList.remove("bodyRed");
-     body.classList.remove("bodyOrange");
-     body.classList.remove("bodyDarkBlue");
-     body.classList.remove("bodyPurple");
-     body.classList.remove("bodyCerulean");
-     body.classList.remove("bodySnow")
-    body.classList.add("bodyBrown");}
-else if (randomNumber === 33 || randomNumber === 46 || randomNumber === 52 || randomNumber === 56 || randomNumber === 61 || randomNumber === 62 || randomNumber === 89) 
-{body.classList.remove("bodyYellow");
-body.classList.remove("bodyLtBlue"); 
-     body.classList.remove("bodySepia");
-     body.classList.remove("bodyPinktoWhite");
-     body.classList.remove("bodyMagenta");
-     body.classList.remove("bodyBlack");
-     body.classList.remove("bodyWhite");
-     body.classList.remove("bodyGray");
-     body.classList.remove("bodyGreen");
-     body.classList.remove("bodyDarkGreen");
-     body.classList.remove("bodyRed");
-     body.classList.remove("bodyBrown");
-     body.classList.remove("bodyDarkBlue");
-     body.classList.remove("bodyPurple");
-     body.classList.remove("bodyCerulean");
-     body.classList.remove("bodySnow")
-    body.classList.add("bodyOrange");}
-else if (randomNumber === 35 || randomNumber === 50)
-{body.classList.remove("bodyYellow")
-body.classList.remove("bodyLtBlue"); 
-     body.classList.remove("bodySepia");
-     body.classList.remove("bodyPinktoWhite");
-     body.classList.remove("bodyMagenta");
-     body.classList.remove("bodyBlack");
-     body.classList.remove("bodyWhite");
-     body.classList.remove("bodyGray");
-     body.classList.remove("bodyGreen");
-     body.classList.remove("bodyDarkGreen");
-     body.classList.remove("bodyRed");
-     body.classList.remove("bodyBrown");
-     body.classList.remove("bodyOrange");
-     body.classList.remove("bodyPurple");
-     body.classList.remove("bodyCerulean");
-     body.classList.remove("bodySnow")
-    body.classList.add("bodyDarkBlue");}
-else if (randomNumber === 42 || randomNumber === 60)
-{body.classList.remove("bodyYellow")
-body.classList.remove("bodyLtBlue"); 
-     body.classList.remove("bodySepia");
-     body.classList.remove("bodyPinktoWhite");
-     body.classList.remove("bodyMagenta");
-     body.classList.remove("bodyBlack");
-     body.classList.remove("bodyWhite");
-     body.classList.remove("bodyGray");
-     body.classList.remove("bodyGreen");
-     body.classList.remove("bodyDarkGreen");
-     body.classList.remove("bodyRed");
-     body.classList.remove("bodyBrown");
-     body.classList.remove("bodyOrange");
-     body.classList.remove("bodyDarkBlue");
-     body.classList.remove("bodyCerulean");
-     body.classList.remove("bodySnow")
-    body.classList.add("bodyPurple");}
-else if (randomNumber === 41 || randomNumber === 65 || randomNumber === 88)
-{body.classList.remove("bodyYellow")
-body.classList.remove("bodyLtBlue"); 
-     body.classList.remove("bodySepia");
-     body.classList.remove("bodyPinktoWhite");
-     body.classList.remove("bodyMagenta");
-     body.classList.remove("bodyBlack");
-     body.classList.remove("bodyWhite");
-     body.classList.remove("bodyGray");
-     body.classList.remove("bodyGreen");
-     body.classList.remove("bodyDarkGreen");
-     body.classList.remove("bodyRed");
-     body.classList.remove("bodyBrown");
-     body.classList.remove("bodyOrange");
-     body.classList.remove("bodyDarkBlue");
-     body.classList.remove("bodyPurple");
-     body.classList.remove("bodySnow")
-    body.classList.add("bodyCerulean");}
-else if (randomNumber === 67)
-{body.classList.remove("bodyYellow");
-body.classList.remove("bodyLtBlue"); 
-     body.classList.remove("bodySepia");
-     body.classList.remove("bodyPinktoWhite");
-     body.classList.remove("bodyMagenta");
-     body.classList.remove("bodyBlack");
-     body.classList.remove("bodyWhite");
-     body.classList.remove("bodyGray");
-     body.classList.remove("bodyGreen");
-     body.classList.remove("bodyDarkGreen");
-     body.classList.remove("bodyRed");
-     body.classList.remove("bodyBrown");
-     body.classList.remove("bodyOrange");
-     body.classList.remove("bodyDarkBlue");
-     body.classList.remove("bodyPurple");
-     body.classList.remove("bodyCerulean");
-    body.classList.add("bodySnow");}
-    const ApiURL = `https://acnhapi.com/v1a/songs/${randomNumber}`;
+            body.classList.add("bodyYellow");}
+   else if (song === 2 || song === 5 || song === 9 || song ===  12 || song === 19
+       || song === 40 || song === 43 || song === 59 || song === 77 || song === 90 || song === 92 || song === 95)
+        {body.classList.remove("bodyYellow"); 
+        body.classList.remove("bodySepia");
+        body.classList.remove("bodyPinktoWhite");
+        body.classList.remove("bodyMagenta");
+        body.classList.remove("bodyBlack");
+        body.classList.remove("bodyWhite");
+        body.classList.remove("bodyGray");
+        body.classList.remove("bodyGreen");
+        body.classList.remove("bodyDarkGreen");
+        body.classList.remove("bodyRed");
+        body.classList.remove("bodyBrown");
+        body.classList.remove("bodyOrange");
+        body.classList.remove("bodyDarkBlue");
+        body.classList.remove("bodyPurple");
+        body.classList.remove("bodyCerulean");
+        body.classList.remove("bodySnow");
+            body.classList.add("bodyLtBlue");}
+   else if (song === 3 || song === 23 || song ===25 || song === 26 ||song === 38 || song === 44 || song === 48 
+           || song === 74 || song === 79 || song === 85)
+           {body.classList.remove("bodyYellow"); 
+           body.classList.remove("bodyLtBlue"); 
+           body.classList.remove("bodyPinktoWhite");
+           body.classList.remove("bodyMagenta");
+           body.classList.remove("bodyBlack");
+           body.classList.remove("bodyWhite");
+           body.classList.remove("bodyGray");
+           body.classList.remove("bodyGreen");
+           body.classList.remove("bodyDarkGreen");
+           body.classList.remove("bodyRed");
+           body.classList.remove("bodyBrown");
+           body.classList.remove("bodyOrange");
+           body.classList.remove("bodyDarkBlue");
+           body.classList.remove("bodyPurple");
+           body.classList.remove("bodyCerulean");
+           body.classList.remove("bodySnow");
+               body.classList.add("bodySepia");}
+   else if (song === 4 || song === 6 || song === 30 || song === 39 || song === 73 || song === 87)
+            {body.classList.remove("bodyYellow"); 
+            body.classList.remove("bodyLtBlue"); 
+            body.classList.remove("bodySepia");
+            body.classList.remove("bodyMagenta");
+            body.classList.remove("bodyBlack");
+            body.classList.remove("bodyWhite");
+            body.classList.remove("bodyGray");
+            body.classList.remove("bodyGreen");
+            body.classList.remove("bodyDarkGreen");
+            body.classList.remove("bodyRed");
+            body.classList.remove("bodyBrown");
+            body.classList.remove("bodyOrange");
+            body.classList.remove("bodyDarkBlue");
+            body.classList.remove("bodyPurple");
+            body.classList.remove("bodyCerulean");
+            body.classList.remove("bodySnow");
+                body.classList.add("bodyPinktoWhite");}
+   else if (song === 7 || song === 37) 
+            {body.classList.remove("bodyYellow");
+             body.classList.remove("bodyLtBlue"); 
+            body.classList.remove("bodySepia");
+            body.classList.remove("bodyPinktoWhite");
+            body.classList.remove("bodyBlack");
+            body.classList.remove("bodyWhite");
+            body.classList.remove("bodyGray");
+            body.classList.remove("bodyGreen");
+            body.classList.remove("bodyDarkGreen");
+            body.classList.remove("bodyRed");
+            body.classList.remove("bodyBrown");
+            body.classList.remove("bodyOrange");
+            body.classList.remove("bodyDarkBlue");
+            body.classList.remove("bodyPurple");
+            body.classList.remove("bodyCerulean");
+            body.classList.remove("bodySnow");
+                body.classList.add("bodyMagenta");}
+   else if (song === 8 || song === 29 || song === 58 || song === 66 || song === 81 || song === 86 || song === 91 || song === 93)
+   {body.classList.remove("bodyYellow"); 
+   body.classList.remove("bodyLtBlue"); 
+        body.classList.remove("bodySepia");
+        body.classList.remove("bodyPinktoWhite");
+        body.classList.remove("bodyMagenta");
+        body.classList.remove("bodyWhite");
+        body.classList.remove("bodyGray");
+        body.classList.remove("bodyGreen");
+        body.classList.remove("bodyDarkGreen");
+        body.classList.remove("bodyRed");
+        body.classList.remove("bodyBrown");
+        body.classList.remove("bodyOrange");
+        body.classList.remove("bodyDarkBlue");
+        body.classList.remove("bodyPurple");
+        body.classList.remove("bodyCerulean");
+        body.classList.remove("bodySnow");
+       body.classList.add("bodyBlack");}
+   else if (song === 13 || song === 14 || song === 16 || song === 70)
+   {body.classList.remove("bodyYellow");
+   body.classList.remove("bodyLtBlue"); 
+        body.classList.remove("bodySepia");
+        body.classList.remove("bodyPinktoWhite");
+        body.classList.remove("bodyMagenta");
+        body.classList.remove("bodyBlack");
+        body.classList.remove("bodyGray");
+        body.classList.remove("bodyGreen");
+        body.classList.remove("bodyDarkGreen");
+        body.classList.remove("bodyRed");
+        body.classList.remove("bodyBrown");
+        body.classList.remove("bodyOrange");
+        body.classList.remove("bodyDarkBlue");
+        body.classList.remove("bodyPurple");
+        body.classList.remove("bodyCerulean");
+        body.classList.remove("bodySnow");
+       body.classList.add("bodyWhite");}
+   else if (song === 17 || song === 20 || song === 28 || song === 82 || song ===94)
+   {body.classList.remove("bodyYellow")
+   body.classList.remove("bodyLtBlue"); 
+        body.classList.remove("bodySepia");
+        body.classList.remove("bodyPinktoWhite");
+        body.classList.remove("bodyMagenta");
+        body.classList.remove("bodyBlack");
+        body.classList.remove("bodyWhite");
+        body.classList.remove("bodyGreen");
+        body.classList.remove("bodyDarkGreen");
+        body.classList.remove("bodyRed");
+        body.classList.remove("bodyBrown");
+        body.classList.remove("bodyOrange");
+        body.classList.remove("bodyDarkBlue");
+        body.classList.remove("bodyPurple");
+        body.classList.remove("bodyCerulean");
+        body.classList.remove("bodySnow");
+       body.classList.add("bodyGray");}
+   else if (song === 21 || song === 22 || song === 45 || song === 68 || song === 75 || song === 76 || song === 80)
+   {body.classList.remove("bodyYellow")
+   body.classList.remove("bodyLtBlue"); 
+        body.classList.remove("bodySepia");
+        body.classList.remove("bodyPinktoWhite");
+        body.classList.remove("bodyMagenta");
+        body.classList.remove("bodyBlack");
+        body.classList.remove("bodyWhite");
+        body.classList.remove("bodyGray");
+        body.classList.remove("bodyDarkGreen");
+        body.classList.remove("bodyRed");
+        body.classList.remove("bodyBrown");
+        body.classList.remove("bodyOrange");
+        body.classList.remove("bodyDarkBlue");
+        body.classList.remove("bodyPurple");
+        body.classList.remove("bodyCerulean");
+        body.classList.remove("bodySnow");
+       body.classList.add("bodyGreen");}
+   else if (song === 54 || song === 57 || song === 72 || song === 78)
+   {body.classList.remove("bodyYellow")
+   body.classList.remove("bodyLtBlue"); 
+        body.classList.remove("bodySepia");
+        body.classList.remove("bodyPinktoWhite");
+        body.classList.remove("bodyMagenta");
+        body.classList.remove("bodyBlack");
+        body.classList.remove("bodyWhite");
+        body.classList.remove("bodyGray");
+        body.classList.remove("bodyGreen");
+        body.classList.remove("bodyRed");
+        body.classList.remove("bodyBrown");
+        body.classList.remove("bodyOrange");
+        body.classList.remove("bodyDarkBlue");
+        body.classList.remove("bodyPurple");
+        body.classList.remove("bodyCerulean");
+        body.classList.remove("bodySnow")
+       body.classList.add("bodyDarkGreen");}
+   else if (song === 27 || song === 31 || song === 51 || song === 53 || song === 64 || song === 83)
+   {body.classList.remove("bodyYellow")
+   body.classList.remove("bodyLtBlue"); 
+        body.classList.remove("bodySepia");
+        body.classList.remove("bodyPinktoWhite");
+        body.classList.remove("bodyMagenta");
+        body.classList.remove("bodyBlack");
+        body.classList.remove("bodyWhite");
+        body.classList.remove("bodyGray");
+        body.classList.remove("bodyGreen");
+        body.classList.remove("bodyDarkGreen");
+        body.classList.remove("bodyBrown");
+        body.classList.remove("bodyOrange");
+        body.classList.remove("bodyDarkBlue");
+        body.classList.remove("bodyPurple");
+        body.classList.remove("bodyCerulean");
+        body.classList.remove("bodySnow")
+       body.classList.add("bodyRed");}
+   else if(song === 18 || song === 24 || song === 32 || song === 34 || song === 36 || song === 55 || 
+    song === 69 || song === 71)
+   {body.classList.remove("bodyYellow");
+   body.classList.remove("bodyLtBlue"); 
+        body.classList.remove("bodySepia");
+        body.classList.remove("bodyPinktoWhite");
+        body.classList.remove("bodyMagenta");
+        body.classList.remove("bodyBlack");
+        body.classList.remove("bodyWhite");
+        body.classList.remove("bodyGray");
+        body.classList.remove("bodyGreen");
+        body.classList.remove("bodyDarkGreen");
+        body.classList.remove("bodyRed");
+        body.classList.remove("bodyOrange");
+        body.classList.remove("bodyDarkBlue");
+        body.classList.remove("bodyPurple");
+        body.classList.remove("bodyCerulean");
+        body.classList.remove("bodySnow")
+       body.classList.add("bodyBrown");}
+   else if (song === 33 || song === 46 || song === 52 || song === 56 || song === 61 || song === 62 || song === 89) 
+   {body.classList.remove("bodyYellow");
+   body.classList.remove("bodyLtBlue"); 
+        body.classList.remove("bodySepia");
+        body.classList.remove("bodyPinktoWhite");
+        body.classList.remove("bodyMagenta");
+        body.classList.remove("bodyBlack");
+        body.classList.remove("bodyWhite");
+        body.classList.remove("bodyGray");
+        body.classList.remove("bodyGreen");
+        body.classList.remove("bodyDarkGreen");
+        body.classList.remove("bodyRed");
+        body.classList.remove("bodyBrown");
+        body.classList.remove("bodyDarkBlue");
+        body.classList.remove("bodyPurple");
+        body.classList.remove("bodyCerulean");
+        body.classList.remove("bodySnow")
+       body.classList.add("bodyOrange");}
+   else if (song === 35 || song === 50)
+   {body.classList.remove("bodyYellow")
+   body.classList.remove("bodyLtBlue"); 
+        body.classList.remove("bodySepia");
+        body.classList.remove("bodyPinktoWhite");
+        body.classList.remove("bodyMagenta");
+        body.classList.remove("bodyBlack");
+        body.classList.remove("bodyWhite");
+        body.classList.remove("bodyGray");
+        body.classList.remove("bodyGreen");
+        body.classList.remove("bodyDarkGreen");
+        body.classList.remove("bodyRed");
+        body.classList.remove("bodyBrown");
+        body.classList.remove("bodyOrange");
+        body.classList.remove("bodyPurple");
+        body.classList.remove("bodyCerulean");
+        body.classList.remove("bodySnow")
+       body.classList.add("bodyDarkBlue");}
+   else if (song === 42 || song === 60)
+   {body.classList.remove("bodyYellow")
+   body.classList.remove("bodyLtBlue"); 
+        body.classList.remove("bodySepia");
+        body.classList.remove("bodyPinktoWhite");
+        body.classList.remove("bodyMagenta");
+        body.classList.remove("bodyBlack");
+        body.classList.remove("bodyWhite");
+        body.classList.remove("bodyGray");
+        body.classList.remove("bodyGreen");
+        body.classList.remove("bodyDarkGreen");
+        body.classList.remove("bodyRed");
+        body.classList.remove("bodyBrown");
+        body.classList.remove("bodyOrange");
+        body.classList.remove("bodyDarkBlue");
+        body.classList.remove("bodyCerulean");
+        body.classList.remove("bodySnow")
+       body.classList.add("bodyPurple");}
+   else if (song === 41 || song === 65 || song === 88)
+   {body.classList.remove("bodyYellow")
+   body.classList.remove("bodyLtBlue"); 
+        body.classList.remove("bodySepia"); body.classList.remove("bodyPinktoWhite");
+        body.classList.remove("bodyMagenta"); body.classList.remove("bodyBlack");
+        body.classList.remove("bodyWhite"); body.classList.remove("bodyGray");
+        body.classList.remove("bodyGreen"); body.classList.remove("bodyDarkGreen");
+        body.classList.remove("bodyRed"); body.classList.remove("bodyBrown");
+        body.classList.remove("bodyOrange"); body.classList.remove("bodyDarkBlue");
+        body.classList.remove("bodyPurple"); body.classList.remove("bodySnow")
+       body.classList.add("bodyCerulean");}
+   else if (song === 67)
+   {body.classList.remove("bodyYellow");
+   body.classList.remove("bodyLtBlue"); 
+        body.classList.remove("bodySepia"); body.classList.remove("bodyPinktoWhite");
+        body.classList.remove("bodyMagenta"); body.classList.remove("bodyBlack");
+        body.classList.remove("bodyWhite"); body.classList.remove("bodyGray");
+        body.classList.remove("bodyGreen"); body.classList.remove("bodyDarkGreen");
+        body.classList.remove("bodyRed"); body.classList.remove("bodyBrown");
+        body.classList.remove("bodyOrange"); body.classList.remove("bodyDarkBlue");
+        body.classList.remove("bodyPurple"); body.classList.remove("bodyCerulean");
+       body.classList.add("bodySnow");}
+    setLoaded("loaded");
+}
+function previousSong(){ 
+    song = song.previous;
+    let newURL = `https://acnhapi.com/v1a/songs/${song}`;
+    axios.get(newURL).then(playSong);
+ }
+
+function nextSong(){
+ song = (song.thisone+1);
+let newestURL = `https://acnhapi.com/v1a/songs/${song}`;
+axios.get(newestURL).then(playSong);
+
+ }
+function getDefaultSong(event){
+    song = 88;
+    let ApiURL = `https://acnhapi.com/v1a/songs/${song}`;
+axios.get(ApiURL).then(playSong);
+}
+function randomize() {
+    song = Math.floor(Math.random() * 95);
+if (song >= 96 && song <= 97){song = 88;}
+else if (song === 0){song = 34;}
+else if(song > 97 && song <= 98){song = 43;}
+else if(song > 98 && song <= 99){song = 33;}
+else if(song > 99 && song <= 100){song = 71;}
+    const ApiURL = `https://acnhapi.com/v1a/songs/${song}`;
     axios.get(ApiURL).then(playSong);
     };
 
