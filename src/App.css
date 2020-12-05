@@ -105,6 +105,7 @@ max-width: 2000px;}
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position-y: bottom;
+  color: #440f0f;
 }
 
 .bodyLtBlue {background-image: url(media/kkclear.png);
@@ -112,6 +113,7 @@ max-width: 2000px;}
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position-y: bottom;
+  color: #440f0f;
 
   }
 
@@ -125,7 +127,7 @@ color: #ffffff;}
 .bodyYellow {
 background-image: url(media/kkclear.png);
 background-color: #FFFE1C;
-color: #2f6b0a;
+color: #205201;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position-y: bottom;
@@ -160,7 +162,8 @@ color: #810072;
     background-image: url(media/kkclear.png), linear-gradient(0deg, #78C945 0%, #ffffff 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position-y: bottom;}
+    background-position-y: bottom;
+    color: #440f0f;}
 
     .bodyDarkGreen {background-image: url(media/kkclear.png);
       background-color: #14A609;
@@ -189,13 +192,13 @@ color: #810072;
       background-color: #381D0D;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      color: #def5a0;
+      color: #f5ff99;
           background-position-y: bottom;}
 
       .bodyOrange {
         background-image: url(media/kkclear.png);
         background-image: url(media/kkclear.png), linear-gradient(0deg, #E85A1F 0%, #ffffff 100%);
-        color: #6b0514;
+        color: #440f0f;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
@@ -205,7 +208,7 @@ color: #810072;
         background-color: #141F3A;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        color: #f17b36;
+        color: #ffffff;
         background-position-y: bottom;
       }
 
@@ -222,6 +225,7 @@ color: #ffffff;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
+        color: #ffffff;
       }
 
       .bodySnow  {background-image: url(media/kk\ snow.jpg);
@@ -230,6 +234,7 @@ color: #ffffff;
         background-attachment: fixed;
         background-position-x: 500px;
         background-position-y: -800px;
+        color: #440f0f;
       }
   
 .left {float: left;}
@@ -298,6 +303,8 @@ z-index: -1;
 
        .Songinfo .songName {font-size: 40px;
         letter-spacing: 3px;
+        text-shadow: 1.5px 1.5px 0px #db8654,
+        -1.5px -1.5px 0px #db9c54;
       margin-bottom: 12px;}
 
 .Songinfo img {max-height: 300px;
