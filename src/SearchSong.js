@@ -317,13 +317,15 @@ function playSong(response){
     setLoaded("loaded");
 }
 function previousSong(){ 
-    song = song.previous;
+    if (song.thisone === 1){song = 95;}
+    else {song = song.previous;}
     let newURL = `https://acnhapi.com/v1a/songs/${song}`;
     axios.get(newURL).then(playSong);
  }
 
 function nextSong(){
- song = (song.thisone+1);
+    if (song.thisone === 95){song = 1;}
+    else {song = (song.thisone+1);}
 let newestURL = `https://acnhapi.com/v1a/songs/${song}`;
 axios.get(newestURL).then(playSong);
 

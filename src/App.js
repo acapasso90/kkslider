@@ -10,6 +10,7 @@ function App() {
        <div className="smallSearchSong"><SearchSong /></div>  </MediaQuery>
         <MediaQuery minDeviceWidth={501}> <Header />  
         <SearchSong  />     </MediaQuery> 
+        <footer>Coded by <a href="https://www.amandacapasso.com">Amanda Capasso</a></footer>
       </div>
   );
 }
