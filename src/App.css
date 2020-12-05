@@ -8,6 +8,7 @@ body {  background-image: url(media/kkclear.png);
   background-position-y: bottom;
   background-color: #F3F3F3;
   font-family: 'Short Stack', cursive;
+  color: #440f0f;
   min-height: 780px;
 }
 
@@ -23,9 +24,13 @@ border-radius: 4px;
  button:active {margin-top: 2px;
   border: 3px solid #682424;}
 
-  footer {margin-top: 350px;}
+  footer {margin-top: 350px;
+    font-size: 18px;}
 
-  footer a {color: #6b0514;}
+  footer a {color: #633408;}
+
+ footer .credit {margin-top: 10px;
+font-size: 16px;}
 .Header header {background-image: url(media/kk\ header.png);
   background-repeat: no-repeat;
   background-position-y: -170px;
@@ -330,4 +335,4 @@ top: 270px}
 .smallSearchSong audio {max-width: 207px;}
 
 .smallSearchSong button {position: absolute;
-  left: 105px;}
+  left: 98px;}
