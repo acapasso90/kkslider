@@ -360,8 +360,8 @@ else { getDefaultSong();
     </div>
     </div>
 <Songinfo data={song} />
-<span className="buttonContainer"></span>
-<button onClick={randomize}>Play Random</button>
+<span className="buttonContainer">
+<button onClick={randomize}>Play Random</button></span>
 <div className="right">
 <div className="rightArrow" onClick={nextSong}>
         <div className="topPoint"></div>

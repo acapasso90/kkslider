@@ -47,6 +47,9 @@ footer::selection, p::selection { background-color: #ac6137;
 .container {display: flex;
 align-items: center;
 justify-content: center;}
+
+
+
 .Header header {background-image: url(media/kk\ header.png);
   background-repeat: no-repeat;
   background-position-y: -175px;
@@ -272,7 +275,7 @@ color: #ffffff;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
-        color: #ffffff;
+        color: #111036;
       }
 
       .bodySnow  {background-image: url(media/kk\ snow.jpg);
@@ -288,7 +291,7 @@ color: #ffffff;
 .left {float: left;}
 
 .leftArrow {position: absolute;
-  left: 295px;
+  left: 425px;
 bottom: 215px;}
 
 .leftArrow .topPoint {background-color: #381D0D;
@@ -315,10 +318,12 @@ min-height: 20px;
 max-width: 12px;
 transform: rotate(35deg);}
 
+.pcSearchSong {position: relative;
+  top: 270px}
  .right {float: right;}
 
 .rightArrow {position: absolute;
-  right: 302px;
+  right: 452px;
   bottom: 218px;}
 
       .rightArrow .topPoint {background-color: #381D0D;
@@ -374,8 +379,7 @@ bottom: 30px;}
 
 .Songinfo .player {margin-bottom: 5px;}
 
-.searchSong .container {position: relative;
-  top: 270px}
+
 
 .smallSearchSong .Songinfo img {max-height: 200px;
   max-width: 200px;
@@ -384,16 +388,19 @@ bottom: 30px;}
   bottom: 10px;
   }
 
-  .smallSearchSong .Songinfo .songName {margin-top: 10px;}
-.smallSearchSong .container {position: relative;
+  .smallSearchSong .Songinfo .songName {margin-top: 20px;
+  position: relative;
+bottom: 15px;}
+
+  .smallSearchSong .container {position: relative;
   top: 130px}
   .smallSearchSong .leftArrow {position: absolute;
-    left: 13px;
+    left: 3px;
     bottom: 158px;}
 
     .smallSearchSong 
     .rightArrow {position: absolute;
-      right: 15px;
+      right: 5px;
       bottom: 158px;}
 
 
@@ -411,29 +418,25 @@ background-color: #eed4b6;
 opacity: 40%;
 z-index: -1;
 position: absolute;}
-.tabletSearchSong {margin-top: 50px;
+.tabletSearchSong {margin-top: 350px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position: fixed;
+  width: 1060px;
+  margin-left: auto;
 }
 .tabletSearchSong .songName {font-size: 28px;
-position: relative;
-top: -10px;
 }
 
 .tabletSearchSong .Songinfo img {max-height: 220px;
   max-width: 220px;
   border: 2px solid #5F6163;
-  position: fixed;
-  bottom: 185px;
-  right: 401px;
   }
-  .tabletSearchSong audio {max-width: 224px;
-    position: fixed;
-    bottom: 125px;
-    right: 401px;}
+  .tabletSearchSong audio {max-width: 224px;}
 
-.tabletSearchSong button {position: fixed;
-  top: 650px;
-left: 425px;}
 
+.tabletSearchSong button {margin-top: -50px;}
 .tabletFooter {position: fixed;
   width: 100%;
   margin-left: auto;
@@ -442,12 +445,11 @@ left: 425px;}
 top: -112px;
 }
 
-.tabletSearchSong 
-.rightArrow {position: fixed;
-  right: 250px;
-  bottom: 278px;}
+.tabletSearchSong .leftArrow {position: absolute;
+  left: 280px;
+  bottom: 188px;}
 
   .tabletSearchSong 
-.leftArrow {position: fixed;
-  left: 250px;
-  bottom: 278px;}
+  .rightArrow {position: absolute;
+    right: 280px;
+    bottom: 188px;}
