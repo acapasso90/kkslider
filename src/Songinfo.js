@@ -1,10 +1,16 @@
 import React, {useState, useEffect} from "react";
 
 export default function Songinfo(props){
-const [newSong, setnewSong]= useState(props.data.songURL);
-useEffect(() => {
-  setnewSong(props.data.songURL);
-}, [props.data.songURL]);
+  const [newSong, setnewSong]= useState(props.data.songURL);
+  useEffect(() => {
+    let mounted = true
+    if (mounted) {setnewSong(props.data.songURL);}
+    return function cleanup() {
+      mounted = false
+  }}, [props.data.songURL]);
+
+ 
+  
 
 
     return(
