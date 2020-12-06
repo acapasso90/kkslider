@@ -116,21 +116,32 @@ text-shadow: 1px 1px 0px #491a1a,
   background-repeat: no-repeat;
   background-position-y: -130px;
   left: -410px;
-  min-height: 100px;
+  max-height: 200px;
 max-width: 800px;
 position: fixed;
 top: 0;
 z-index: 0;
 box-shadow: 0px 4px 6px #f8e7c7;}
 
-.tabletHeader header h1 {font-size: 95pt;
+.tabletHeader header .backdrop {  max-height: 100px;
+  min-height: 95px;
+  opacity: 40%;
+  min-width: 2200px;
+z-index: -1;
+background-color: #f1e3e3;
+position: relative;
+top: -14px;
+}
+.tabletHeader header h1 {font-size: 85pt;
   color: #da8f4d;
   position: relative;
   right: 95px;
+ bottom: 270px;
   user-select:none;
   top: 110px;
-  letter-spacing: 18px;
+  letter-spacing: 20px;
   margin-right: 155px;
+  margin-top: -22px;
 text-shadow: 1px 1px 0px #491a1a,
 -1px -1px 0px #491a1a,
 2px 2px 0px #491a1a,
@@ -361,7 +372,7 @@ border: 2px solid #5F6163;
 .Songinfo .player {margin-bottom: 5px;}
 
 .searchSong .container {position: relative;
-top: 270px}
+  top: 270px}
 
 .smallSearchSong .Songinfo img {max-height: 200px;
   max-width: 200px;
@@ -387,3 +398,33 @@ top: 270px}
 
 .smallSearchSong button {position: absolute;
  top: 320px;}
+
+.tabletSearchSong {margin-top: 50px;
+position: fixed;
+left: 355px;}
+.tabletSearchSong .songName {font-size: 28px;}
+.tabletSearchSong .Songinfo img {max-height: 220px;
+  max-width: 220px;
+  border: 2px solid #5F6163;
+  position: relative;
+  bottom: 10px;
+  }
+  .tabletSearchSong audio {max-width: 224px;}
+.tabletSearchSong button {position: absolute;
+  top: 350px;}
+
+.tabletFooter {position: fixed;
+  font-size: 17px;
+top: -132px;
+left: 20px;
+}
+
+.tabletSearchSong 
+.rightArrow {position: absolute;
+  right: -50px;
+  bottom: 158px;}
+
+  .tabletSearchSong 
+.leftArrow {position: absolute;
+  left: -52px;
+  bottom: 158px;}
