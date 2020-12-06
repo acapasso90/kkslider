@@ -129,24 +129,6 @@ function playSong(response){
         body.classList.remove("bodyCerulean");
         body.classList.remove("bodySnow");
        body.classList.add("bodyBlack");}
-   else if (song === 13 || song === 14 || song === 16 || song === 70)
-   {body.classList.remove("bodyYellow");
-   body.classList.remove("bodyLtBlue"); 
-        body.classList.remove("bodySepia");
-        body.classList.remove("bodyPinktoWhite");
-        body.classList.remove("bodyMagenta");
-        body.classList.remove("bodyBlack");
-        body.classList.remove("bodyGray");
-        body.classList.remove("bodyGreen");
-        body.classList.remove("bodyDarkGreen");
-        body.classList.remove("bodyRed");
-        body.classList.remove("bodyBrown");
-        body.classList.remove("bodyOrange");
-        body.classList.remove("bodyDarkBlue");
-        body.classList.remove("bodyPurple");
-        body.classList.remove("bodyCerulean");
-        body.classList.remove("bodySnow");
-       body.classList.add("bodyWhite");}
    else if (song === 17 || song === 20 || song === 28 || song === 82 || song ===94)
    {body.classList.remove("bodyYellow")
    body.classList.remove("bodyLtBlue"); 
@@ -303,7 +285,7 @@ function playSong(response){
         body.classList.remove("bodyOrange"); body.classList.remove("bodyDarkBlue");
         body.classList.remove("bodyPurple"); body.classList.remove("bodySnow")
        body.classList.add("bodyCerulean");}
-   else if (song === 67)
+ else if (song === 13 ||  song === 14 || song === 16 || song === 67 ||  song === 70)
    {body.classList.remove("bodyYellow");
    body.classList.remove("bodyLtBlue"); 
         body.classList.remove("bodySepia"); body.classList.remove("bodyPinktoWhite");

@@ -15,20 +15,11 @@ body {  background-image: url(media/kkclear.png);
   color: #440f0f;
   min-height: 780px;
 }
-footer::selection, p::selection { background-color: #ac6137;
-color: #ffffff;}
 
-.songName::selection {background-color: #ac6137;
-  color: #ffffff;}
-
-footer a, footer a:active {color: #633408;}
-
-footer a:hover {text-decoration: none;
-color: #6d5238;}
 button, button:hover {background-color: #da8f4d;
 border: 3px solid #682424;
 position: absolute;
-top: 440px;
+top: 355px;
 color: #440f0f;
 padding: 15px 25px;
 border-radius: 4px;
@@ -37,44 +28,54 @@ border-radius: 4px;
  button:active {margin-top: 2px;
   border: 3px solid #682424;}
 
-  footer {margin-top: 350px;
-    font-size: 18px;}
+  
+footer a, footer a:active {color: #633408;}
 
- footer .credit {margin-top: 10px;
-font-size: 16px;}
+footer a:hover {text-decoration: none;
+color: #6d5238;}
 
+
+footer {margin-top: 318px;
+  font-size: 18px;}
+
+footer .credit {margin-top: 5px;
+font-size: 14px;}
+
+footer::selection, p::selection { background-color: #ac6137;
+  color: #ffffff;}
+  
 .container {display: flex;
 align-items: center;
 justify-content: center;}
 .Header header {background-image: url(media/kk\ header.png);
   background-repeat: no-repeat;
-  background-position-y: -170px;
-  max-height: 240px;
+  background-position-y: -175px;
+  max-height: 210px;
 min-width: 2200px;
 position: fixed;
 left: -200px;
 z-index: 1;
 box-shadow: 0px 4px 6px #f8e7c7;}
 
-.Header header .backdrop {  min-height: 110px;
+.Header header .backdrop {  min-height: 106px;
   opacity: 42%;
   min-width: 2200px;
 z-index: -1;
 background-color: #f1e3e3;
 position: relative;
-top: -30px;
+top: -41px;
 }
-.Header header h1 {font-size: 95pt;
+.Header header h1 {font-size: 90pt;
   color: #da8f4d;
   position: relative;
   user-select:none;
-  top: 110px;
+  top: 90px;
   letter-spacing: 55px;
   margin-right: 150px;
-text-shadow: 1px 1px 0px #491a1a,
--1px -1px 0px #491a1a,
-2px 2px 0px #491a1a,
--2px 2px 0px #491a1a,
+text-shadow: 1px 1px 0px #682424,
+-1px -1px 0px #682424,
+2px 2px 0px #682424,
+-2px 2px 0px #682424,
 -3px 3px 8px #000000;}
 
 .smallHeader header {background-image: url(media/kk\ headerSmall.jpg);
@@ -105,11 +106,11 @@ top: 62px;
   z-index: 2;
   top: 55px;
   margin-left: 222px;
-text-shadow: 1px 1px 0px #491a1a,
--1px -1px 0px #491a1a,
-2px 2px 0px #491a1a,
--2px 2px 0px #491a1a,
--2px -2px 0px #491a1a,
+text-shadow: 1px 1px 0px #682424,
+-1px -1px 0px #682424,
+2px 2px 0px #682424,
+-2px 2px 0px #682424,
+-2px -2px 0px #682424,
 -4px 4px 8px #000000;}
 
 .tabletHeader header {background-image: url(media/kk\ header.png);
@@ -153,13 +154,6 @@ text-shadow: 1px 1px 0px #491a1a,
 max-width: 2000px;}
 
 
-.bodyWhite {  background-image: url(media/kkclear.png);
-  background-color: #ffffff;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position-y: bottom;
-  color: #440f0f;
-}
 
 .bodyLtBlue {background-image: url(media/kkclear.png);
   background-image: url(media/kkclear.png), linear-gradient(0deg, rgba(150,255,250,1) 0%, rgba(229,255,249,1) 50%, rgba(255,255,255,1) 100%);
@@ -294,7 +288,7 @@ color: #ffffff;
 .left {float: left;}
 
 .leftArrow {position: absolute;
-  left: 215px;
+  left: 295px;
 bottom: 215px;}
 
 .leftArrow .topPoint {background-color: #381D0D;
@@ -324,7 +318,7 @@ transform: rotate(35deg);}
  .right {float: right;}
 
 .rightArrow {position: absolute;
-  right: 222px;
+  right: 302px;
   bottom: 218px;}
 
       .rightArrow .topPoint {background-color: #381D0D;
@@ -358,16 +352,25 @@ z-index: -1;
 
        .Songinfo .songName {font-size: 40px;
         letter-spacing: 3px;
+        white-space: nowrap;
         text-shadow: 1.5px 1.5px 0px #db8654,
         -1.5px -1.5px 0px #db9c54;
-      margin-bottom: 12px;}
+      position: relative;
+    bottom: 45px;}
 
-.Songinfo img {max-height: 300px;
-max-width: 300px;
+    .songName::selection {background-color: #ac6137;
+      color: #ffffff;}
+    
+.Songinfo img {max-height: 260px;
+max-width: 260px;
 position: relative;
-bottom: 10px;
+bottom: 40px;
 border: 2px solid #5F6163;
 }
+
+.Songinfo audio {max-width: 262px;
+position: relative;
+bottom: 30px;}
 
 .Songinfo .player {margin-bottom: 5px;}
 
@@ -380,6 +383,8 @@ border: 2px solid #5F6163;
   position: relative;
   bottom: 10px;
   }
+
+  .smallSearchSong .Songinfo .songName {margin-top: 10px;}
 .smallSearchSong .container {position: relative;
   top: 130px}
   .smallSearchSong .leftArrow {position: absolute;
@@ -399,32 +404,50 @@ border: 2px solid #5F6163;
 .smallSearchSong button {position: absolute;
  top: 320px;}
 
+.smallFooter .backdrop {min-height: 150px;
+min-width: 380px;
+max-width: 400px;
+background-color: #eed4b6;
+opacity: 40%;
+z-index: -1;
+position: absolute;}
 .tabletSearchSong {margin-top: 50px;
-position: fixed;
-left: 355px;}
-.tabletSearchSong .songName {font-size: 28px;}
+}
+.tabletSearchSong .songName {font-size: 28px;
+position: relative;
+top: -10px;
+}
+
 .tabletSearchSong .Songinfo img {max-height: 220px;
   max-width: 220px;
   border: 2px solid #5F6163;
-  position: relative;
-  bottom: 10px;
+  position: fixed;
+  bottom: 185px;
+  right: 401px;
   }
-  .tabletSearchSong audio {max-width: 224px;}
-.tabletSearchSong button {position: absolute;
-  top: 350px;}
+  .tabletSearchSong audio {max-width: 224px;
+    position: fixed;
+    bottom: 125px;
+    right: 401px;}
+
+.tabletSearchSong button {position: fixed;
+  top: 650px;
+left: 425px;}
 
 .tabletFooter {position: fixed;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 17px;
-top: -132px;
-left: 20px;
+top: -112px;
 }
 
 .tabletSearchSong 
-.rightArrow {position: absolute;
-  right: -50px;
-  bottom: 158px;}
+.rightArrow {position: fixed;
+  right: 250px;
+  bottom: 278px;}
 
   .tabletSearchSong 
-.leftArrow {position: absolute;
-  left: -52px;
-  bottom: 158px;}
+.leftArrow {position: fixed;
+  left: 250px;
+  bottom: 278px;}
