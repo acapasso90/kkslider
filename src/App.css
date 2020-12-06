@@ -291,7 +291,7 @@ color: #ffffff;
 .left {float: left;}
 
 .leftArrow {position: absolute;
-  left: 425px;
+  left: 512px;
 bottom: 215px;}
 
 .leftArrow .topPoint {background-color: #381D0D;
@@ -323,8 +323,8 @@ transform: rotate(35deg);}
  .right {float: right;}
 
 .rightArrow {position: absolute;
-  right: 452px;
-  bottom: 218px;}
+  right: 515px;
+  bottom: 212px;}
 
       .rightArrow .topPoint {background-color: #381D0D;
         height: 100%;
