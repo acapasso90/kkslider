@@ -406,7 +406,9 @@ bottom: 15px;}
 
 .smallSearchSong .songName {font-size: 30px;}
 
-.smallSearchSong audio {max-width: 207px;}
+.smallSearchSong audio {max-width: 207px;
+position: relative;
+top: -8px;}
 
 .smallSearchSong button {position: absolute;
  top: 320px;}
