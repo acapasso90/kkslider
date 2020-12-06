@@ -1,3 +1,7 @@
+a::selection  { background-color: #ac6137;
+  color: #ffffff;}
+
+
 audio {
   border: 2.5px solid #702727;
   background-color: #da8f4d;
@@ -11,11 +15,20 @@ body {  background-image: url(media/kkclear.png);
   color: #440f0f;
   min-height: 780px;
 }
+footer::selection, p::selection { background-color: #ac6137;
+color: #ffffff;}
 
+.songName::selection {background-color: #ac6137;
+  color: #ffffff;}
+
+footer a, footer a:active {color: #633408;}
+
+footer a:hover {text-decoration: none;
+color: #6d5238;}
 button, button:hover {background-color: #da8f4d;
 border: 3px solid #682424;
 position: absolute;
-left: 488px;
+top: 440px;
 color: #440f0f;
 padding: 15px 25px;
 border-radius: 4px;
@@ -27,10 +40,12 @@ border-radius: 4px;
   footer {margin-top: 350px;
     font-size: 18px;}
 
-  footer a {color: #633408;}
-
  footer .credit {margin-top: 10px;
 font-size: 16px;}
+
+.container {display: flex;
+align-items: center;
+justify-content: center;}
 .Header header {background-image: url(media/kk\ header.png);
   background-repeat: no-repeat;
   background-position-y: -170px;
@@ -52,6 +67,7 @@ top: -30px;
 .Header header h1 {font-size: 95pt;
   color: #da8f4d;
   position: relative;
+  user-select:none;
   top: 110px;
   letter-spacing: 55px;
   margin-right: 150px;
@@ -68,6 +84,7 @@ text-shadow: 1px 1px 0px #491a1a,
   min-height: 100px;
 max-width: 800px;
 position: fixed;
+top: 0;
 z-index: 0;
 box-shadow: 0px 4px 6px #f8e7c7;}
 
@@ -87,13 +104,38 @@ top: 62px;
   position: absolute;
   z-index: 2;
   top: 55px;
-  margin-left: 212px;
+  margin-left: 222px;
 text-shadow: 1px 1px 0px #491a1a,
 -1px -1px 0px #491a1a,
 2px 2px 0px #491a1a,
 -2px 2px 0px #491a1a,
 -2px -2px 0px #491a1a,
 -4px 4px 8px #000000;}
+
+.tabletHeader header {background-image: url(media/kk\ header.png);
+  background-repeat: no-repeat;
+  background-position-y: -130px;
+  left: -410px;
+  min-height: 100px;
+max-width: 800px;
+position: fixed;
+top: 0;
+z-index: 0;
+box-shadow: 0px 4px 6px #f8e7c7;}
+
+.tabletHeader header h1 {font-size: 95pt;
+  color: #da8f4d;
+  position: relative;
+  right: 95px;
+  user-select:none;
+  top: 110px;
+  letter-spacing: 18px;
+  margin-right: 155px;
+text-shadow: 1px 1px 0px #491a1a,
+-1px -1px 0px #491a1a,
+2px 2px 0px #491a1a,
+-2px 2px 0px #491a1a,
+-3px 3px 8px #000000;}
 
 .app {  font-family: 'Short Stack', cursive;
   text-align: center;
@@ -236,11 +278,13 @@ color: #ffffff;
         background-position-y: -800px;
         color: #440f0f;
       }
+
   
 .left {float: left;}
 
 .leftArrow {position: absolute;
-  left: 215px;}
+  left: 215px;
+bottom: 215px;}
 
 .leftArrow .topPoint {background-color: #381D0D;
   margin-top: 180px;
@@ -335,10 +379,11 @@ top: 270px}
     .rightArrow {position: absolute;
       right: 15px;
       bottom: 158px;}
-    
+
+
 .smallSearchSong .songName {font-size: 30px;}
 
 .smallSearchSong audio {max-width: 207px;}
 
 .smallSearchSong button {position: absolute;
-  left: 98px;}
+ top: 320px;}

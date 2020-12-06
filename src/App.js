@@ -8,7 +8,9 @@ function App() {
     <div className="app">
         <MediaQuery maxDeviceWidth={500}><div className="smallHeader"><Header /></div>
        <div className="smallSearchSong"><SearchSong /></div>  </MediaQuery>
-        <MediaQuery minDeviceWidth={501}> <Header />  
+        <MediaQuery minDeviceWidth={501}><div className="tabletHeader"> <Header />  </div> 
+        <SearchSong  />     </MediaQuery> 
+        <MediaQuery minDeviceWidth={1025}><Header />  
         <SearchSong  />     </MediaQuery> 
         <footer>
         <div className="credit">
