@@ -413,13 +413,14 @@ top: -8px;}
 .smallSearchSong button {position: absolute;
  top: 320px;}
 
-.smallFooter .backdrop {min-height: 150px;
+.smallFooter .backdrop {min-height: 180px;
 min-width: 380px;
 max-width: 400px;
 background-color: #eed4b6;
 opacity: 40%;
 z-index: -1;
-position: absolute;}
+position: absolute;
+left: 5px;}
 .tabletSearchSong {margin-top: 350px;
   display: flex;
   align-content: center;
