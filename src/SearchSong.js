@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import Songinfo from "./Songinfo.js";
+import Loader from 'react-loader-spinner'
 
 export default function SearchSong(){
     let [song, setSongInfo] = useState("")
@@ -350,25 +351,14 @@ if (loaded) { return(<div className="searchSong">
 </div>
 </div>)}
 else { getDefaultSong();
-    return(<div className="searchSong">
-<div className="container">
-<div className="left">
-<div className="leftArrow" onClick={previousSong}>
-        <div className="topPoint"></div>
-        <div className="bottomPoint"></div>
-        <div className="flat"></div>
-    </div>
-    </div>
-<Songinfo data={song} />
-<span className="buttonContainer">
-<button onClick={randomize}>Play Random</button></span>
-<div className="right">
-<div className="rightArrow" onClick={nextSong}>
-        <div className="topPoint"></div>
-        <div className="bottomPoint"></div>
-        <div className="flat"></div>
-    </div>
-    </div>
-</div>
-</div>);}
+    return(  
+        <div className="Loading">
+             <Loader
+        type="Puff"
+        color="#973636;"
+        height={250}
+        width={250}
+        timeout={6000}
+     />
+     </div>);}
 } 

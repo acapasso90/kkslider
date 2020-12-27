@@ -8,7 +8,7 @@ export default function Footer(){
       <p>  All images, songs, and characters found on the app are the sole property of Nintendo and Animal Crossing <br />
        and are only used for non-commercial and educational purpose.</p>
       </div>
-      Coded by <a href="https://www.amandacapasso.com">Amanda Capasso</a>
+      <a href="https://github.com/acapasso90/kkslider" target="blank" rel="noreferrer">Open-source app </a> coded by <a href="https://www.amandacapasso.com"  target="blank" rel="noreferrer">Amanda Capasso</a> using the <a href="http://acnhapi.com/" target="blank" rel="noreferrer">ACNH API</a>
         </footer>
         </div>
     )
