@@ -278,6 +278,8 @@ font-size: 4vw;
   left: 32%;
 bottom: 215px;}
 
+.leftArrow:hover, .rightArrow:hover {cursor: pointer;}
+
 
 .pcSearchSong {position: relative;
   top: 270px}
@@ -321,23 +323,30 @@ bottom: 30px;}
   max-width: 200px;
   border: 2px solid #5F6163;
   position: relative;
-  bottom: 10px;
+  bottom: 50px;
   }
 
-  .smallSearchSong .Songinfo .songName {margin-top: 20px;
+  .smallSearchSong .Songinfo .songName {
   position: relative;
-bottom: 15px;}
+bottom: 65px;}
 
   .smallSearchSong .container {position: relative;
-  top: 130px}
-  .smallSearchSong .leftArrow {position: absolute;
-    left: 3px;
-    bottom: 158px;}
+    min-width: 80%!important;
+    margin-left: 1.5%;
+  top: 130px;
+} 
 
-    .smallSearchSong 
-    .rightArrow {position: absolute;
-      right: 5px;
-      bottom: 158px;}
+  .smallSearchSong .leftArrow {position: absolute;
+    left: 2%;
+    font-size: 30pt;
+    bottom: 188px;}
+
+    .smallSearchSong  .rightArrow {position: absolute;
+      right: 2%;
+      font-size: 30pt;
+      bottom: 188px;}
+
+      .smallSearchSong {width: 100%;}
 
 
 .smallSearchSong .songName {font-size: 30px;}
@@ -351,7 +360,7 @@ top: -8px;}
 top: 395px;}
 
 .smallSearchSong button {position: absolute;
- top: 320px;}
+ top: 380px;}
 
 .smallFooter .backdrop {min-height: 180px;
 min-width: 400px;
@@ -367,6 +376,7 @@ position: absolute;}
   align-content: center;
   justify-content: center;
   position: fixed;
+  z-index: -2;
 min-width: 100%;
   margin-left: auto;
 }
@@ -404,3 +414,8 @@ top: -112px;
   top: -45px;}
   
   .searchSong {width: 100%;}}
+
+  @media only screen and (max-width: 500px) {.container {width: 100%!important;}
+
+.player {position: relative; top: -30px;}
+  .searchSong {width: 100%;} }

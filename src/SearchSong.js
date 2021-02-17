@@ -363,13 +363,13 @@ if (loaded) { return(<div className="searchSong">
 <div className="container">
     <div className="left">
     <div className="leftArrow" onClick={previousSong}>
-    <i class="fas fa-caret-square-left"></i>
+    <i className ="fas fa-caret-square-left"></i>
     </div>  </div>
 <Songinfo data={song} />
 <button onClick={randomize}>Play Random</button>
 <div className="right">
 <div className="rightArrow" onClick={nextSong}>
-<i class="fas fa-caret-square-right"></i>
+<i className="fas fa-caret-square-right"></i>
     </div>
     </div>
 </div>
