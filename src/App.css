@@ -46,6 +46,10 @@ footer::selection, p::selection { background-color: #ac6137;
   color: #ffffff;}
   
 .container {display: flex;
+  z-index: -1;
+  width: 40%!important;
+  max-width: 40%!important;
+  min-height: 460px!important;
 align-items: center;
 justify-content: center;}
 
@@ -154,6 +158,8 @@ text-shadow: 1px 1px 0px #491a1a,
 -3px 3px 8px #000000;}
 
 .app {  font-family: 'Short Stack', cursive;
+  width: 100vw;
+  height: 100vh;
   text-align: center;
 max-width: 2000px;}
 
@@ -356,6 +362,7 @@ z-index: -1;
       max-width: 12px;
       transform: rotate(40deg);}
 
+
        .Songinfo .songName {font-size: 40px;
         letter-spacing: 3px;
         white-space: nowrap;
@@ -410,6 +417,10 @@ bottom: 15px;}
 .smallSearchSong audio {max-width: 207px;
 position: relative;
 top: -8px;}
+
+.pcSearchSong button {position: absolute;
+  height: 13%;
+top: 395px;}
 
 .smallSearchSong button {position: absolute;
  top: 320px;}
