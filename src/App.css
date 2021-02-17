@@ -12,22 +12,24 @@ body {  background-image: url(media/kkclear.png);
   background-position-y: bottom;
   background-color: #F3F3F3;
   font-family: 'Short Stack', cursive;
-  color: #440f0f;
+  color: #ffffff;
   min-height: 780px;
 }
 
 button, button:hover {background-color: #da8f4d;
-border: 3px solid #682424;
+border: 5px solid #682424;
+font-weight: bold;
 position: absolute;
 top: 355px;
 color: #440f0f;
 padding: 15px 25px;
-border-radius: 4px;
+border-radius: 2px;
  }
 
  button:active {margin-top: 2px;
-  border: 3px solid #682424;
-  outline:none;}
+  border: 5px solid #682424;
+  outline:none;
+  border-radius: 2px;}
 
   
 footer a, footer a:active {color: #633408;}
@@ -50,6 +52,8 @@ footer::selection, p::selection { background-color: #ac6137;
   width: 40%!important;
   max-width: 40%!important;
   min-height: 460px!important;
+  background-color: rgb(82, 52, 25, 0.90);
+  border-radius: 2%;
 align-items: center;
 justify-content: center;}
 
@@ -67,7 +71,7 @@ box-shadow: 0px 4px 6px #f8e7c7;}
 
 .Header header .backdrop {  min-height: 106px;
   opacity: 42%;
-  min-width: 2200px;
+  min-width: 100%;
 z-index: -1;
 background-color: #f1e3e3;
 position: relative;
@@ -91,7 +95,7 @@ text-shadow: 1px 1px 0px #682424,
   background-position-y: -60px;
   left: -210px;
   min-height: 100px;
-max-width: 800px;
+max-width: 100%;
 position: fixed;
 top: 0;
 z-index: 0;
@@ -100,7 +104,7 @@ box-shadow: 0px 4px 6px #f8e7c7;}
 .smallHeader header .backdrop {  max-height: 80px;
   min-height: 35px;
   opacity: 40%;
-  min-width: 2200px;
+  min-width: 100%;
 z-index: -1;
 background-color: #f1e3e3;
 position: relative;
@@ -126,7 +130,6 @@ text-shadow: 1px 1px 0px #682424,
   background-position-y: -130px;
   left: -410px;
   max-height: 200px;
-max-width: 800px;
 position: fixed;
 top: 0;
 z-index: 0;
@@ -169,79 +172,60 @@ max-width: 2000px;}
   background-image: url(media/kkclear.png), linear-gradient(0deg, rgba(150,255,250,1) 0%, rgba(229,255,249,1) 50%, rgba(255,255,255,1) 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position-y: bottom;
-  color: #440f0f;
-
-  }
+  background-position-y: bottom;}
 
 .bodyBlack {background-image: url(media/kk\ black.jpg);
   background-color: #000000;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position-y: -1080px;
-color: #ffffff;}
+  background-position-y: -1080px;}
 
 .bodyYellow {
 background-image: url(media/kkclear.png);
 background-color: #FFFE1C;
-color: #205201;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position-y: bottom;
-
-}
+  background-position-y: bottom;}
 
 .bodySepia {background-image: url(media/kkclear.png);
   background-image: url(media/kkclear.png), linear-gradient(0deg, rgb(201, 141, 85) 0%, rgb(248, 221, 185) 100%);;
   background-repeat: no-repeat;
-  color: #973636;
   background-attachment: fixed;
-  background-position-y: bottom;
-}
+  background-position-y: bottom;}
 
 .bodyPinktoWhite {background-image: url(media/kkclear.png);
   background-image: url(media/kkclear.png), linear-gradient(0deg, rgba(238,151,205,1) 0%, rgba(218,191,245,1) 50%, rgba(255,255,255,1) 100%);
-color: #810072;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position-y: bottom;  
-}
+  background-position-y: bottom;  }
 
   .bodyMagenta {background-image: url(media/kkclear.png);
     background-color: #F0018E;
-    color: #ffffff;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position-y: bottom;   
-  }
+    background-position-y: bottom;   }
 
   .bodyGreen {background-image: url(media/kkclear.png);
     background-image: url(media/kkclear.png), linear-gradient(0deg, #78C945 0%, #ffffff 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position-y: bottom;
-    color: #440f0f;}
+    background-position-y: bottom;}
 
     .bodyDarkGreen {background-image: url(media/kkclear.png);
       background-color: #14A609;
-      color: #ffffff;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      background-position-y: bottom;
-    }
+      background-position-y: bottom;   }
 
   .bodyGray {background-image: url(media/kkclear.png);
     background-color:#5F6163;
-    color: #ffffff;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position-y: bottom;
-}
+    background-position-y: bottom; }
 
 .bodyRed {background-image: url(media/kkclear.png);
   background-color: #870114;
   background-repeat: no-repeat;
-  color: #ffffff;
   background-attachment: fixed;
   background-position-y: bottom;}
 
@@ -249,40 +233,32 @@ color: #810072;
       background-color: #381D0D;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      color: #f5ff99;
           background-position-y: bottom;}
 
       .bodyOrange {
         background-image: url(media/kkclear.png);
         background-image: url(media/kkclear.png), linear-gradient(0deg, #E85A1F 0%, #ffffff 100%);
-        color: #440f0f;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-position-y: bottom;
-      }
+        background-position-y: bottom; }
 
       .bodyDarkBlue {   background-image: url(media/kkclear.png);
         background-color: #141F3A;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        color: #ffffff;
-        background-position-y: bottom;
-      }
+        background-position-y: bottom; }
 
       .bodyPurple {   background-image: url(media/kkclear.png);
 background-color: #562150;
-color: #ffffff;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-position-y: bottom;
-      }
+        background-position-y: bottom; }
 
       .bodyCerulean {background-image: url(media/kkclear.png);
         background-image: url(media/kkclear.png), linear-gradient(0deg, #149EBE 0%, rgba(255,255,255,1) 100%);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
-        color: #111036;
       }
 
       .bodySnow  {background-image: url(media/kk\ snow.jpg);
@@ -291,83 +267,35 @@ color: #ffffff;
         background-attachment: fixed;
         background-position-x: 500px;
         background-position-y: -800px;
-        color: #440f0f;
       }
 
   
 .left {float: left;}
 
 .leftArrow {position: absolute;
-  left: 512px;
+color: rgb(189, 134, 82);
+font-size: 4vw;
+  left: 32%;
 bottom: 215px;}
 
-.leftArrow .topPoint {background-color: #381D0D;
-  margin-top: 180px;
-  border: 4px solid  #da8f4d;
-min-height: 20px;
-min-width: 60px;
-transform: rotate(125deg);
- }
-
- .leftArrow .bottomPoint {background-color: #381D0D;
-  margin-top: 10px;
-  margin-left: 6px;
-  border: 4px solid  #da8f4d;
-min-height: 20px;
-min-width: 60px;
-transform: rotate(35deg);
- }
-
- .leftArrow .flat {background-color: #381D0D;
-  margin-top: -36px;
-  margin-left: 17px;
-min-height: 20px;
-max-width: 12px;
-transform: rotate(35deg);}
 
 .pcSearchSong {position: relative;
   top: 270px}
  .right {float: right;}
 
 .rightArrow {position: absolute;
-  right: 515px;
+  right: 32%;
+  color: rgb(189, 134, 82);
+  font-size: 4vw;
   bottom: 212px;}
 
-      .rightArrow .topPoint {background-color: #381D0D;
-        height: 100%;
-        border: 4px solid  #da8f4d;
-  min-height: 20px;
-      max-height: 40px;
-      min-width: 61px;
-      transform: rotate(40deg);
-       }
-      
-       .rightArrow .bottomPoint {background-color: #381D0D;
-        margin-top: 9px;
-position: relative;
-left: 2px;
-z-index: -1;
-        border: 4px solid  #da8f4d;
-      min-height: 20px;
-      min-width: 61px;
-      transform: rotate(130deg);
-       }
-       .rightArrow .flat {background-color: #381D0D;
-        position: relative;
-        top: 2px;
-        margin-top: -27px;
-        margin-left: 30px;
-        z-index: 2;
-      min-height: 22px;
-      max-width: 12px;
-      transform: rotate(40deg);}
 
 
        .Songinfo .songName {font-size: 40px;
         letter-spacing: 3px;
         white-space: nowrap;
-        text-shadow: 1.5px 1.5px 0px #db8654,
-        -1.5px -1.5px 0px #db9c54;
+        color: #faf0db;
+        text-shadow: 1.5px 1.5px 0px #e4722b;
       position: relative;
     bottom: 45px;}
 
@@ -433,12 +361,13 @@ opacity: 60%;
 z-index: -1;
 top: 630px;
 position: absolute;}
+
 .tabletSearchSong {margin-top: 350px;
   display: flex;
   align-content: center;
   justify-content: center;
   position: fixed;
-  width: 1060px;
+min-width: 100%;
   margin-left: auto;
 }
 .tabletSearchSong .songName {font-size: 28px;
@@ -451,7 +380,8 @@ position: absolute;}
   .tabletSearchSong audio {max-width: 224px;}
 
 
-.tabletSearchSong button {margin-top: -50px;}
+.tabletSearchSong button {margin-top: 5px;}
+
 .tabletFooter {position: fixed;
   width: 100%;
   margin-left: auto;
@@ -461,10 +391,16 @@ top: -112px;
 }
 
 .tabletSearchSong .leftArrow {position: absolute;
-  left: 280px;
+  left: 2%;
   bottom: 188px;}
 
   .tabletSearchSong 
   .rightArrow {position: absolute;
-    right: 280px;
+    right: 2%;
     bottom: 188px;}
+
+    @media only  screen and (min-width: 501px) and (max-width: 1024px) { .container { width: 100%!important;
+    position: relative;
+  top: -45px;}
+  
+  .searchSong {width: 100%;}}
