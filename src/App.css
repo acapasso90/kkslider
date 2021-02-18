@@ -95,6 +95,7 @@ text-shadow: 1px 1px 0px #682424,
   background-position-y: -60px;
   left: -210px;
   min-height: 100px;
+  width: 100%;
 max-width: 100%;
 position: fixed;
 top: 0;
@@ -111,13 +112,13 @@ position: relative;
 top: 62px;
 
 }
-.smallHeader header h1 {font-size: 32pt;
+.smallHeader header h1 {font-size: 33pt;
   letter-spacing: 6px;
   color: #da8f4d;
   position: absolute;
   z-index: 2;
   top: 55px;
-  margin-left: 222px;
+  margin-left: 10%;
 text-shadow: 1px 1px 0px #682424,
 -1px -1px 0px #682424,
 2px 2px 0px #682424,
@@ -346,7 +347,9 @@ bottom: 65px;}
       font-size: 30pt;
       bottom: 188px;}
 
-      .smallSearchSong {width: 100%;}
+      .smallSearchSong {width: 100%;
+        margin-top: 5%;
+      margin-left: 8%;}
 
 
 .smallSearchSong .songName {font-size: 30px;}
@@ -363,6 +366,9 @@ top: 395px;}
  top: 380px;}
 
 .smallFooter .footer {width: 98%;}
+
+.smallFooter {position: relative;
+top: -18%;}
  .footer {background-color:rgba(247, 247, 247, 0.4);
 width: 50%;
 margin-left: auto;
