@@ -366,7 +366,7 @@ if (loaded) { return(<div className="searchSong">
     <i className ="fas fa-caret-square-left"></i>
     </div>  </div>
 <Songinfo data={song} />
-<button onClick={randomize}>Play Random</button>
+<button onClick={randomize} className="randomButton">Play Random</button>
 <div className="right">
 <div className="rightArrow" onClick={nextSong}>
 <i className="fas fa-caret-square-right"></i>
