@@ -12,8 +12,7 @@ function App() {
         <Footer />  </div>
         </MediaQuery>
         <MediaQuery minDeviceWidth={501} maxDeviceWidth={1025}><div className="tabletHeader"> <Header />  </div> 
-        <div className="tabletFooter"><Footer /></div> 
-        <div className="tabletSearchSong"><SearchSong  />  </div>   </MediaQuery> 
+        <div className="tabletSearchSong"><SearchSong  />  </div>   <div className="tabletFooter"><Footer /></div>   </MediaQuery> 
         <MediaQuery minDeviceWidth={1026}><Header />  <div className="pcSearchSong">
         <SearchSong  />    </div>
       <Footer />
