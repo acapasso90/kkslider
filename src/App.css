@@ -16,7 +16,7 @@ body {  background-image: url(media/kkclear.png);
   min-height: 780px;
 }
 
-button, button:hover {background-color: #da8f4d;
+button {background-color: #da8f4d;
 border: 5px solid #682424;
 font-weight: bold;
 position: absolute;
@@ -26,6 +26,8 @@ z-index: 2;
 padding: 15px 25px;
 border-radius: 2px;
  }
+
+ button:hover {background-color: #ffb779;}
 
  button:active {margin-top: 2px;
   border: 5px solid #682424;
@@ -280,7 +282,11 @@ font-size: 4vw;
   left: 32%;
 bottom: 215px;}
 
-.leftArrow:hover, .rightArrow:hover {cursor: pointer;}
+.leftArrow:hover, .rightArrow:hover {cursor: pointer;
+  color: rgb(255, 205, 158);}
+
+  .leftArrow:active, .rightArrow:active {
+  top: 150px;}
 
 
 .pcSearchSong {position: relative;
