@@ -285,8 +285,12 @@ bottom: 215px;}
 .leftArrow:hover, .rightArrow:hover {cursor: pointer;
   color: rgb(255, 205, 158);}
 
-  .leftArrow:active, .rightArrow:active {
-  top: 150px;}
+  .leftArrow:active {
+  top: 152px;}
+
+  .rightArrow:active {
+    top: 155px;}
+  
 
 
 .pcSearchSong {position: relative;
